@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monPortfolio</title>
+    <link rel="website icon" type="png" href="images/726056.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fond étoilé -->
+    <div id="stars"></div>
+    <div id="shooting-star"></div>
+    <div id="top"></div>
+    <header id="header">
+      <nav>
+          <div class="logo-et-son">
+              <h1 class="accueil"><a href="index.html">Mon Portfolio</a></h1>
+              <i id="speakerIcon" class="fa-solid fa-volume-high speaker-icon"></i>
+              <span class="music-text"></span>
+          </div>
+          <ul>
+              <li><a href="index.html">A propos de moi <span></span></a></li>
+              <li><a href="#projet">Mes projets<span></span></a></li>
+              <li><a href="index.html#passion">Mes passions<span></span></a></li>
+              <li><a href="contact.html">Contact<span></span></a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+        <h2 id="projet" class="titre-section">Mes projets</h2>
+        <article>
+           <h3>Mes projets</h3>
+           <p>J'ai effectué de nombreux projets dans de nombreux domaines et je vais vous les présenter un à un sur cette page. Si vous voulez plus d'informations sur un projet, cliquez sur "Voir Github".</p>
+        </article>
+        <section class="web-projects">
+            <div class="project">
+              <img src="images/portfolio.jpg" alt="Capture du projet Portfolio">
+              <h3>Mon Portfolio Web</h3>
+              <p>Site personnel développé en HTML/CSS/JS mettant en valeur mes compétences, mes projets et ma passion pour le design web.</p>
+              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur Github</a>
+            </div>
+
+            <div class="project">
+              <img src="images/javaProject.jpg" alt="Projet de développement">
+              <h3>...</h3>
+              <p>Projet Node.js & Socket.io : une app de messagerie en temps réel avec gestion des utilisateurs et des salons.</p>
+              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur GitHub</a>
+            </div>
+          
+            <div class="project">
+              <img src="images/snakeGame.png" alt="Snake game en C">
+              <h3>Snake Terminal (C)</h3>
+              <p>Jeu Snake codé en C pour le terminal Linux. Génération aléatoire de blocs, collisions et score dynamique. Jeux codé en 4 versions et version automatique.</p>
+              <a href="https://github.com/enzhao08/Snake-game" target="_blank">Voir sur GitHub</a>
+            </div>
+          
+            <div class="project">
+              <img src="images/dockerProjet.jpg" alt="Projet Dockerisé">
+              <h3>Projet Web Dockerisé</h3>
+              <p>Automatisation et conversion de fichiers Web à l'aide de Docker et des langages bash et php ou encore les filtres sur linux.</p>
+              <a href="https://github.com/tonprofil/docker-site" target="_blank">Voir sur Github</a>
+            </div>
+          
+            <div class="project">
+              <img src="images/journal.jpg" alt="Projet journal noir et blanc">
+              <h3>Journal Étudiant</h3>
+              <p>Création graphique d’un journal en équipe en noir et blanc intégrant des jeux, des articles,
+                 et une maquette typographique soignée.<br>Ps : j'ai été le dessinateur des caricatures politiques.</p>
+              <a href="pdf/journal_B1.pdf" target="_blank">Voir le PDF</a>
+            </div>
+
+            <div class="project">
+              <img src="images/BdD.jpeg" alt="Projet Base de donnée">
+              <h3>Base de Donnée étudiant</h3>
+              <p>Création d'une base de donnée et modélisation d'une partie des données nécessaires à l’étude des admissions,
+                des inscriptions et des résultats des étudiants de BUT informatique.</p>
+              <a href="https://github.com/enzhao08/Base-de-donn-e-tudiante" target="_blank">Voir sur Github</a>
+            </div>
+
+            <div class="project">
+              <img src="images/gestion-de-projets.jpg" alt="Projet gestion de projet">
+              <h3>Application "EllaDanse"</h3>
+              <p>Création et rédaction de la note de cadrage et analyse du besoin afin de rédiger la spécification des exigences logicielles.</p>
+              <a href="https://github.com/enzhao08/Gestion-de-projet-EllaDanse-" target="_blank">Voir sur Github</a>
+            </div>
+
+            <div class="project">
+              <img src="images/blackHole-projet.jpg" alt="Projet site vitrine trou noir">
+              <h3>Site sur les Trous Noirs</h3>
+              <p>Développement en cours d'un site vitrine sur les trous noirs en HTML et CSS.</p>
+              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur Github</a><br>
+              ou <br>
+              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir le site</a>
+            </div>
+        </section>
+        <!-- Section étoiles filantes -->
+        <section class="shooting-star">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+        <video id="background-video" autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" style="pointer-events: none;" class="video">
+			    <source src="videos/Nebula1.mp4" type="video/mp4"></source>
+		    </video>
+        <audio id="musiqueFond" src="videos/InterstellarExperience.mp3" loop></audio>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+      
+          <!-- Section 1 : Logo -->
+          <div class="footer-logo">
+            <img src="images/logoMoi.png" alt="Logo"/>
+          </div>
+      
+          <!-- Section 2 : Navigation -->
+          <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="#projet">Projets</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html">À propos</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 3 : Contact -->
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li>📧 enzo.annic@orange.fr</li>
+              <li>📍 Lannion, France</li>
+              <li><a href="contact.html">En savoir plus →</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 4 : Réseaux ou citation -->
+          <div class="footer-section">
+            <h3>Suivez-moi</h3>
+            <ul class="social-links">
+              <li><a href="https://github.com/enzhao08" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="quote">"Vers l’infini et au-delà !"</p>
+          </div>
+      
+        </div>
+    </footer>
+    <div style="text-align: center; font-size: 12px; background-color: black;">
+        © 2025 ANNIC-Enzo. Tous droits réservés.
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <img src="" alt="Image agrandie" id="popupImage">
+    </div>
+    <canvas id="starCanvas"></canvas>
+    <script src="javascript.js"></script>
+    <script>
+      const canvas = document.getElementById('starCanvas');
+      const ctx = canvas.getContext('2d');
+      runCanvasAnimation(ctx, canvas);
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+</body>
+</html>
