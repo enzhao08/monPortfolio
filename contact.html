@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monPortfolio</title>
+    <link rel="website icon" type="png" href="images/726056.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fond étoilé -->
+    <div id="stars"></div>
+    <div id="shooting-star"></div>
+    <div id="top"></div>
+    <header id="header">
+        <nav>
+            <div class="logo-et-son">
+                <h1 class="accueil"><a href="index.html">Mon Portfolio</a></h1>
+                <i id="speakerIcon" class="fa-solid fa-volume-high speaker-icon"></i>
+                <span class="music-text"></span>
+            </div>
+            <ul>
+                <li><a href="index.html">A propos de moi <span></span></a></li>
+                <li><a href="projet.html">Mes projets<span></span></a></li>
+                <li><a href="index.html#passion">Mes passions<span></span></a></li>
+                <li><a href="#contact">Contact<span></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="contact" class="titre-section">Contact</h2>
+        <div class="contact-container">
+            <!-- Formulaire -->
+            <form>
+                <fieldset>
+                    <label>Nom* : <input type="text" placeholder="Entrez votre nom" required></label><br><br>
+                    <label>Prénom* : <input type="text" placeholder="Entrez votre prénom" required></label><br><br>
+                    <label>Adresse e-mail* : <input type="email" placeholder="Entrez votre adresse e-mail" required></label><br><br>
+                    <label>Téléphone : <input type="tel" placeholder="Entrez votre numéro de téléphone"></label><br><br>
+                    <span>*champs obligatoires</span>
+                </fieldset>
+        
+                <div class="confirmation">
+                    <label><input type="checkbox" required> J'accepte les conditions d'utilisation.</label>
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
+        
+            <!-- Bloc Infos de contact -->
+            <div class="contact-info">
+                <h2>Informations de contact</h2>
+                <p><strong>📍 Adresse :</strong> Rue Edouard Branly, 22300 Lannion</p>
+                <p><strong>📧 Email :</strong> enzo.annic@orange.fr</p>
+                <p><strong>📞 Téléphone :</strong> +33 7 84 82 72 65</p>
+                <p><strong>🕒 Horaires :</strong> Lundi à Vendredi, 8h - 17h45</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61573606267363" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/enzo.080906/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Section étoiles filantes -->
+        <section class="shooting-star">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+        <video id="background-video" autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" style="pointer-events: none;" class="video">
+			<source src="videos/black-hole2.mp4" type="video/mp4" loop></source>
+		</video>
+        <audio id="musiqueFond" src="videos/InterstellarExperience.mp3" loop></audio>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+      
+          <!-- Section 1 : Logo -->
+          <div class="footer-logo">
+            <img src="images/logoMoi.png" alt="Logo"/>
+          </div>
+      
+          <!-- Section 2 : Navigation -->
+          <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="projet.html">Projets</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="index.html">À propos</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 3 : Contact -->
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li>📧 enzo.annic@orange.fr</li>
+              <li>📍 Lannion, France</li>
+              <li><a href="contact.html">En savoir plus →</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 4 : Réseaux ou citation -->
+          <div class="footer-section">
+            <h3>Suivez-moi</h3>
+            <ul class="social-links">
+              <li><a href="https://github.com/enzhao08" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="quote">"Vers l’infini et au-delà !"</p>
+          </div>
+      
+        </div>
+    </footer>
+    <div style="text-align: center; font-size: 12px; background-color: black;">
+        © 2025 ANNIC-Enzo. Tous droits réservés.
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <img src="" alt="Image agrandie" id="popupImage">
+    </div>
+    <canvas id="starCanvas"></canvas>
+    <script src="javascript.js"></script>
+    <script>
+      const canvas = document.getElementById('starCanvas');
+      const ctx = canvas.getContext('2d');
+      runCanvasAnimation(ctx, canvas);
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+</body>
+</html>
