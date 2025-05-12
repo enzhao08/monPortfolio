@@ -1,1 +1,302 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monPortfolio</title>
+    <link rel="website icon" type="png" href="images/726056.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fond étoilé -->
+    <div id="stars"></div>
+    <div id="shooting-star"></div>
+    <div id="top" class="titre-section"></div>
+    <button class="info-button" onclick="openModal()">i</button>
+    <header id="header">
+        <nav>
+            <div class="logo-et-son">
+                <h1 class="accueil"><a href="#top">Mon Portfolio</a></h1>
+                <i id="speakerIcon" class="fa-solid fa-volume-high speaker-icon"></i>
+                <span class="music-text"></span>
+            </div>
+            <button class="change-video-btn">Changer le fond d'écran</button>
+            <ul>
+                <li><a href="#top">A propos de moi <span></span></a></li>
+                <li><a href="projet.html">Mes projets<span></span></a></li>
+                <li><a href="#passion">Mes passions<span></span></a></li>
+                <li><a href="contact.html">Contact<span></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="entete">
+            <h1>Enzo ANNIC</h1>
+            <div class="typewriter">
+              <span id="text"></span><span id="cursor">|</span>
+            </div>
+          </section>
+          
+        <section class="presentation">
+            <div>
+                <a href="images/data.jpg">
+                  <img src="images/data.jpg" class="image-popup" alt="moi">
+                </a>
+            </div>
+            <div class="descIcon">
+                <div class="description">
+                <h2>Qui suis-je ?</h2>
+                <p>Etudiant en 1<sup>ère</sup> année de BUT informatique, je suis passionné par l'informatique 
+                    et le développement web depuis plusieurs années. Et l'espace aussi... 
+                    mais ça vous l'avez peut-être deviné. Dans ce petit portfolio, vous allez découvrir 
+                    mon univers et tout ce qui m'anime au quotidien.</p>
+                <div class="iconCv">
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61573606267363" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/enzo.080906/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Enzo ANNIC-développeur-web.pdf" download class="btn-cv">Télécharger mon CV ⬇️</a>
+                </div>      
+            </div>    
+            
+        </section>
+        <h2 id="passion" class="titre-section">Mes passions du quotidien</h2>
+        <article>
+           <h3>1- Le piano 🎹, ma préférée !</h3>
+           <p>Depuis maintenant deux ans, le piano fait partie intégrante de mon quotidien. 
+            J’ai commencé par curiosité, et très vite, j’ai été captivé par la richesse des émotions 
+            qu’un simple clavier pouvait transmettre.</p>
+            <p>Au fil du temps, j’ai appris à jouer des morceaux qui me tiennent à cœur, 
+               à comprendre les nuances, à improviser parfois, et surtout à ressentir la musique.</p>
+            <p>Aujourd’hui, j’ai envie de partager un peu de ce que je sais jouer, 
+                non pas pour impressionner, mais pour transmettre cette passion qui m’anime et, 
+                peut-être, donner à d’autres l’envie de se lancer aussi.</p>
+        </article>
+        <section class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Juin 2023 – Début du piano</h3>
+                <p>J'ai commencé le piano avec un petit synthétiseur en jouant du Queen comme première chanson</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2024 – Début des chansons de Gibran Alcocer</h3>
+                <p>En 2024, j'ai joué beaucoup de pièces de Gibran Alcocer</p>
+              </div>
+            </div>
+          
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2025 – Début des chansons de Tony Ann</h3>
+                <p>Après 1 ans et demi, j'ai voulu avoir du challenge, et commencé à jouer des pièces de Tony Ann</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h3>Aujourd’hui – Portfolio</h3>
+                  <p>Et Aujourd’hui, je vous montre ce que j'ai apprendre en autodidate durant ces 2 dernières années. Bonne écoute !!</p>
+                </div>
+                </div>
+        </section>
+        <section class="piano-projects">
+            <div class="project">
+                <video class="stopMusic" controls>
+                    <source src="videos/capricornTry1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Capricorn "The Ambitious"<br>by Tony Ann</h3>
+                <p>Voici une interprétation au piano de Capricorn qui a été ma première chanson achevée de mon artiste préféré, Tony Ann 🎹</p>
+                <a href="https://youtu.be/E6tIHO-kE08?si=DaYkJQi2thXLgsAf" target="_blank">Écouter sur Youtube</a>
+            </div>
+        
+            <div class="project">
+                <video class="stopMusic" controls>
+                    <source src="videos/aquarius.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Aquarius "The Explorer"<br>by Tony Ann</h3>
+                <p>Aquarius est l'une de mes chansons préféré de l'album <a href="https://youtube.com/playlist?list=PLwzx8XHxN527xiwvLINsqkavZQ4sakW4w&si=eWTxOj49Ntbv2PcQ" target="_blank">360°</a></p>
+                <a href="https://youtu.be/O6PGjWF215s?si=r_M-TbrZfC2DU7Qm" target="_blank">Écouter sur Youtube</a>
+            </div>
+        
+            <div class="project">
+                <video class="stopMusic" controls poster="images/snow.jpg">
+                    <source src="videos/Snow.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Snow<br>by Fabrizio Paterlini</h3>
+                <p>Reprise douce au piano</p>
+                <a href="https://youtu.be/7zP1C7sP70s?si=yPK_y3gw9pMygP_E" target="_blank">Écouter sur Youtube</a>
+            </div>
+
+            <div class="project">
+                <video class="stopMusic" controls poster="images/idea20.jpg">
+                    <source src="videos/Idea20.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Idea 20<br>by Gibran Alcocer</h3>
+                <p>Reprise douce au piano</p>
+                <a href="https://youtu.be/RPEDJXBDMjo?si=X8VfVl7CgGFNvpqQ" target="_blank">Écouter sur Youtube</a>
+            </div>
+
+            <div class="project">
+                <video class="stopMusic" controls poster="images/Idea1.jpg">
+                    <source src="videos/Idea1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Idea 1<br>by Gibran Alcocer</h3>
+                <p>Reprise douce au piano</p>
+                <a href="https://youtu.be/QzlcxmVBIFo?si=lo9DyTf0Rq36qHQm" target="_blank">Écouter sur Youtube</a>
+            </div>
+
+            <div class="project">
+                <video class="stopMusic" controls poster="images/Idea7.jpg">
+                    <source src="videos/Idea7.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Idea 7<br>by Gibran Alcocer</h3>
+                <p>Reprise douce au piano</p>
+                <a href="https://youtu.be/2y_T1iScjd4?si=PqNzEWVko1hQdpq5" target="_blank">Écouter sur Youtube</a>
+            </div>
+        </section>
+        <article>
+            <h3>2- Le dessin ✏️, mon enfance</h3>
+            <p>Je me suis mis au dessin il y a 18 ans, un peu par curiosité au départ… 
+                et je n’ai jamais arrêté depuis. C’est devenu un vrai moment de plaisir 
+                et de créativité, que ce soit pour poser une idée sur papier ou juste me 
+                vider la tête. J’explore petit à petit différents styles, à mon rythme, 
+                toujours avec l’envie de progresser.</p>
+        </article>
+
+
+        <div class="gallery">
+            <div class="gallery-container">
+                <img class="gallery-item gallery-item-1 image-popup" src="images/dessinCoquillage.jpg" data-index="1" alt="Coquillage">
+                <img class="gallery-item gallery-item-2 image-popup" src="images/dessinPlouf.jpg" data-index="2" alt="Plouf">
+                <img class="gallery-item gallery-item-3 image-popup" src="images/dessinCoffee.jpg" data-index="3" alt="Cafe">
+                <img class="gallery-item gallery-item-4 image-popup" src="images/dessinLambo.jpg" data-index="4" alt="Lamborghini">
+                <img class="gallery-item gallery-item-5 image-popup" src="images/dessinEtang.jpg" data-index="5" alt="Etang">
+                <p class="text-info">Cliquez sur une image pour l'agrandir</p>
+            </div>
+            <div class="gallery-controls">
+            </div>
+        </div>
+        <!-- Section étoiles filantes -->
+        <section class="shooting-star">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+        
+
+        <div class="video-selector">
+            <ul>
+                <li><a href="videos/black-hole.mp4" data-video="black-hole.mp4">Vidéo 1</a></li>
+                <li><a href="videos/black-hole2.mp4" data-video="black-hole2.mp4">Vidéo 2</a></li>
+                <li><a href="videos/fondGalaxy2.mp4" data-video="fondGalaxy2.mp4">Vidéo 3</a></li>
+                <li><a href="videos/fondGalaxy3.mp4" data-video="fondGalaxy3.mp4">Vidéo 4</a></li>
+                <li><a href="videos/Nebula1.mp4" data-video="Nebula1.mp4">Vidéo 5</a></li>
+                <li><a href="videos/Nebula2.mp4" data-video="Nebula2.mp4">Vidéo 6</a></li>
+                <li><a href="videos/FondGalawy1.mp4" data-video="FondGalawy1.mp4">Vidéo 7</a></li>
+            </ul>
+        </div>
+
+        <video id="background-video" autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" style="pointer-events: none;">
+            <source src="videos/black-hole.mp4" type="video/mp4" loop>
+        </video>
+        <audio id="musiqueFond" src="videos/Interstellar.mp3" loop></audio>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+      
+            <!-- Section 1 : Logo -->
+            <div class="footer-logo">
+                <div onclick="openModal1()"><img src="images/logoMoi.png" alt="Logo"/></div>
+                <p>cliquez sur le logo pour en savoir plus →</p>
+            </div>
+            
+      
+          <!-- Section 2 : Navigation -->
+          <div class="footer-section">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="#top">Accueil</a></li>
+              <li><a href="projet.html">Projets</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#top">À propos</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 3 : Contact -->
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li>📧 enzo.annic@orange.fr</li>
+              <li>📍 Lannion, France</li>
+              <li><a href="contact.html">En savoir plus →</a></li>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+            </ul>
+          </div>
+      
+          <!-- Section 4 : Réseaux ou citation -->
+          <div class="footer-section">
+            <h3>Suivez-moi</h3>
+            <ul class="social-links">
+              <li><a href="https://github.com/enzhao08" target="_blank">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="quote">"Vers l’infini et au-delà !"</p>
+          </div>
+      
+        </div>
+    </footer>
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>À propos des fonds et de la musique</h2>
+            <p>Vous êtes peut être en train de vous dire :<br> Pourquoi ces fonds ? Eh bien parce que j'adore l'espace, tout simplement !<br>Et les musiques ? Connaissez-vous le film Interstellar? Toutes mes musiques et ces fonds viennent ou font référence à ce film qui est IN-CROY-ABLE, et je vous conseille de le regarder. </p>
+        </div>
+    </div>
+    <div id="infoModal1" class="modal1">
+        <div class="modal-content1">
+            <span class="close-btn1" onclick="closeModal1()">&times;</span>
+            <h2>À propos de mon logo</h2>
+            <p>Ce logo réunit mes initiales E et A, subtilement intégrées dans une composition moderne où chaque élément a une signification :<br>
+                - E évoque l’énergie, l’évolution personnelle et la curiosité intellectuelle.<br>
+                - A symbolise l’ambition, l’authenticité et l’ascension dans mes projets.<br>
+                - La flèche quant à elle représente le mouvement constant vers l’avant, l’objectif, la progression et la vision.</p>
+        </div>
+    </div>
+    <div style="text-align: center; font-size: 12px; background-color: black;">
+        © 2025 ANNIC-Enzo. Tous droits réservés.
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <img src="" alt="Image agrandie" id="popupImage">
+    </div>
+    <canvas id="starCanvas"></canvas>
+    <script src="javascript.js"></script>
+    <script>
+      const canvas = document.getElementById('starCanvas');
+      const ctx = canvas.getContext('2d');
+      runCanvasAnimation(ctx, canvas);
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+</body>
+</html>
