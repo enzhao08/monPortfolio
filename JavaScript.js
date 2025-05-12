@@ -1,0 +1,409 @@
+
+const textElement = document.getElementById('text');
+const cursorElement = document.getElementById('cursor');
+
+if (textElement && cursorElement) {
+    const words = ["Alternance Développeur Web", "Développeur Front-End"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
+            charIndex--;
+        } else {
+            charIndex++;
+        }
+
+        textElement.textContent = currentWord.substring(0, charIndex);
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 2000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+
+    type();
+}
+
+const audio = document.getElementById('musiqueFond');
+const speakerIcon = document.getElementById('speakerIcon');
+const stopVideos = document.querySelectorAll('.stopMusic');
+
+audio.volume = 0.3;
+
+let userMuted = false;
+
+// Bouton mute / unmute
+speakerIcon.addEventListener('click', () => {
+    if (audio.paused) {
+      userMuted = false;
+      audio.play().catch(err => console.warn("Lecture audio bloquée :", err));
+      speakerIcon.classList.remove('fa-volume-xmark');
+      speakerIcon.classList.add('fa-volume-high');
+    } else {
+      userMuted = true;
+      audio.pause();
+      speakerIcon.classList.remove('fa-volume-high');
+      speakerIcon.classList.add('fa-volume-xmark');
+    }
+});
+
+// Vérifie si une vidéo de classe stopMusic joue
+function isAnyVideoPlaying() {
+return Array.from(stopVideos).some(video => !video.paused && !video.ended);
+}
+
+// Reprend la musique si aucune vidéo ne joue
+function resumeIfNoVideoPlaying() {
+if (!isAnyVideoPlaying() && !userMuted) {
+    audio.play().catch(err => console.warn("Reprise audio bloquée :", err));
+    speakerIcon.classList.remove('fa-volume-xmark');
+    speakerIcon.classList.add('fa-volume-high');
+}
+}
+
+// Gère le comportement de toutes les vidéos avec la classe .stopMusic
+stopVideos.forEach(video => {
+video.addEventListener('play', () => {
+    // Stoppe les autres vidéos .stopMusic sauf celle qui vient de jouer
+    stopVideos.forEach(otherVideo => {
+    if (otherVideo !== video && !otherVideo.paused) {
+        otherVideo.pause();
+    }
+    });
+
+    audio.pause(); // Coupe la musique
+});
+
+video.addEventListener('pause', resumeIfNoVideoPlaying);
+video.addEventListener('ended', resumeIfNoVideoPlaying);
+});
+document.querySelectorAll('a[href]').forEach(link => {
+link.addEventListener('click', event => {
+    const url = new URL(link.href);
+    const currentHost = window.location.host;
+
+    if (url.host !== currentHost) {
+        audio.pause(); // Stoppe la musique avant de quitter
+    }
+});
+});
+
+//gère le scroll du header
+window.addEventListener("scroll", () => {
+const header = document.getElementById("header");
+if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+} else {
+    header.classList.remove("scrolled");
+}
+});
+
+// Sélectionne tous les liens qui ont un href commençant par '#'
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Empêche le comportement par défaut du lien
+
+        // Défilement fluide vers l'élément correspondant à l'ID du lien
+        const targetId = this.getAttribute('href').substring(1); // Récupère l'ID cible sans le "#"
+        const targetElement = document.getElementById(targetId);
+
+        // Effectue le défilement vers l'élément cible
+        targetElement.scrollIntoView({
+            behavior: 'smooth', // Défilement fluide
+            block: 'start' // Aligne l'élément au début de la fenêtre
+        });
+    });
+});
+
+// Gère le carousel d'images de dessin
+const galleryContainer = document.querySelector('.gallery-container');
+const galleryControlsContainer = document.querySelector('.gallery-controls');
+const galleryControls = ['précédent', 'suivant'];
+const galleryItems = document.querySelectorAll('.gallery-item'); // <- ici c'était ".gallery-items" (erreur)
+
+class Carousel {
+    constructor(container, items, controls) {
+        this.carouselContainer = container;
+        this.carouselControls = controls;
+        this.carouselArray = [...items];
+    }
+
+    updateGallery() {
+        // Enlève toutes les classes de position
+        this.carouselArray.forEach(el => {
+            el.classList.remove('gallery-item-1');
+            el.classList.remove('gallery-item-2');
+            el.classList.remove('gallery-item-3');
+            el.classList.remove('gallery-item-4');
+            el.classList.remove('gallery-item-5');
+        });
+
+        // Réattribue les classes en fonction de leur nouvelle position
+        this.carouselArray.slice(0, 5).forEach((el, i) => {
+            el.classList.add(`gallery-item-${i + 1}`); // <- backticks
+        });
+    }
+
+    setCurrentState(direction) {
+        if (direction.className.includes('précédent')) {
+            this.carouselArray.unshift(this.carouselArray.pop());
+        } else {
+            this.carouselArray.push(this.carouselArray.shift());
+        }
+        this.updateGallery();
+    }
+
+    setControls() {
+        this.carouselControls.forEach(control => {
+            const btn = document.createElement('button');
+            btn.className = `gallery-controls-${control}`;
+            btn.innerText = control; // texte visible
+            galleryControlsContainer.appendChild(btn);
+        });
+    }
+
+    useControls() {
+        const triggers = [...galleryControlsContainer.querySelectorAll('button')];
+        triggers.forEach(control => {
+            control.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.setCurrentState(control);
+            });
+        });
+    }
+}
+
+// Création et lancement du carrousel
+const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+exampleCarousel.setControls();
+exampleCarousel.useControls();
+exampleCarousel.updateGallery(); // ajoute ça pour forcer l’état initial
+
+
+// Récupère tous les liens ou images avec la classe image-popup
+document.querySelectorAll('.image-popup').forEach(img => {
+    img.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const src = this.src;
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupImage = document.getElementById('popupImage');
+
+        popupImage.src = src;
+        popupOverlay.style.display = 'flex';
+    });
+});
+
+// Fermer le popup quand on clique en dehors de l'image
+document.getElementById('popupOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.style.display = 'none';
+    }
+});
+
+//Les modals
+//Modal 1
+function openModal() {
+    document.getElementById("infoModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("infoModal").style.display = "none";
+}
+
+// Fermer en cliquant hors de la boîte
+window.onclick = function(event) {
+    const modal = document.getElementById("infoModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+//Modal 2
+function openModal1() {
+    document.getElementById("infoModal1").style.display = "block";
+}
+
+function closeModal1() {
+    document.getElementById("infoModal1").style.display = "none";
+}
+
+// Fermer en cliquant hors de la boîte
+window.onclick = function(event) {
+    const modal1 = document.getElementById("infoModal1");
+    if (event.target === modal1) {
+        modal1.style.display = "none";
+    }
+}
+
+function runCanvasAnimation(ctx, canvas) {
+
+    const SHOOTING_STAR_PROBABILITY = 0.01;
+    const SHOOTING_STAR_MIN_LENGTH = 10;
+    const SHOOTING_STAR_MAX_LENGTH = 80;
+    const SHOOTING_STAR_MIN_SPEED = 5;
+    const SHOOTING_STAR_MAX_SPEED = 10;
+    const SHOOTING_STAR_ANGLE = Math.PI / 4;
+    const SHOOTING_STAR_COLOR = '#FFFFFF';
+    const SHOOTING_STAR_OPACITY_DECREASE = 0.01;
+    const MAX_PARALLAX_MOVEMENT = 100;
+    const GRADIENT_COLOR_START = '#000000';
+    const GRADIENT_COLOR_END = '#000000';
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let shootingStarsArray = [];
+    let mouseX = canvas.width / 2;
+    let mouseY = canvas.height / 2;
+
+    class ShootingStar {
+        constructor(x, y, length, speed, angle, color) {
+            this.x = x;
+            this.y = y;
+            this.length = length;
+            this.speed = speed;
+            this.angle = angle;
+            this.color = color;
+            this.opacity = 1;
+        }
+
+        draw() {
+            ctx.save();
+            ctx.globalAlpha = this.opacity;
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(this.x + this.length * Math.cos(this.angle), this.y + this.length * Math.sin(this.angle));
+            ctx.strokeStyle = this.color;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.restore();
+        }
+
+        update() {
+            this.x += this.speed * Math.cos(this.angle);
+            this.y += this.speed * Math.sin(this.angle);
+            this.opacity -= SHOOTING_STAR_OPACITY_DECREASE;
+            this.draw();
+        }
+
+        isOutOfBounds() {
+            return (
+                this.x < 0 || this.x > canvas.width ||
+                this.y < 0 || this.y > canvas.height ||
+                this.opacity <= 0
+            );
+        }
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+
+        // Garder le fond du canvas transparent ou avec un dégradé léger
+        ctx.clearRect(0, 0, canvas.width, canvas.height);  // Clear previous frame
+
+        let parallaxX = ((mouseX - canvas.width / 2) / canvas.width) * MAX_PARALLAX_MOVEMENT;
+        let parallaxY = ((mouseY - canvas.height / 2) / canvas.height) * MAX_PARALLAX_MOVEMENT;
+
+        if (Math.random() < SHOOTING_STAR_PROBABILITY) {
+            let x = Math.random() * (canvas.width * 2 / 3);
+            let y = Math.random() * (canvas.height * 2 / 3);
+            let length = SHOOTING_STAR_MIN_LENGTH + Math.random() * (SHOOTING_STAR_MAX_LENGTH - SHOOTING_STAR_MIN_LENGTH);
+            let speed = SHOOTING_STAR_MIN_SPEED + Math.random() * (SHOOTING_STAR_MAX_SPEED - SHOOTING_STAR_MIN_SPEED);
+            let angle = Math.random() * SHOOTING_STAR_ANGLE;
+            let color = SHOOTING_STAR_COLOR;
+
+            shootingStarsArray.push(new ShootingStar(x, y, length, speed, angle, color));
+        }
+
+        for (let i = 0; i < shootingStarsArray.length; i++) {
+            ctx.save();
+            ctx.translate(parallaxX, parallaxY);
+            shootingStarsArray[i].update();
+            ctx.restore();
+            if (shootingStarsArray[i].isOutOfBounds()) {
+                shootingStarsArray.splice(i, 1);
+                i--;
+            }
+        }
+    }
+
+    function init() {
+        shootingStarsArray = [];
+    }
+
+    document.addEventListener('mousemove', function(event) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    });
+
+    init();
+    animate();
+}
+
+
+const items = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+items.forEach(item => observer.observe(item));
+
+
+
+
+const btn = document.querySelector('.change-video-btn');
+const videoSelector = document.querySelector('.video-selector');
+const videoElement = document.getElementById('background-video');  // Assure-toi que l'ID correspond ici
+const videoLinks = document.querySelectorAll('.video-selector a');
+
+// Afficher/masquer le menu déroulant
+btn.addEventListener('click', () => {
+    videoSelector.style.display = videoSelector.style.display === 'block' ? 'none' : 'block';
+});
+
+// Changer la vidéo au clic
+videoLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // éviter le comportement par défaut (rechargement)
+
+        // Récupérer la nouvelle vidéo à charger
+        const newVideo = e.target.getAttribute('data-video');
+
+        // Masquer la vidéo pendant le changement (pas d'animation encore)
+        videoElement.style.opacity = 0; 
+
+        // Changer la source de la vidéo
+        videoElement.querySelector('source').src = `videos/${newVideo}`;
+
+        // Recharger et démarrer la vidéo
+        videoElement.load();
+
+        // Une fois la vidéo chargée, ajouter la classe "playing" pour l'animation
+        videoElement.addEventListener('loadeddata', () => {
+            videoElement.play(); // Lance la vidéo dès qu'elle est prête
+            videoElement.classList.add('playing'); // Appliquer la transition de fondu en arrière-plan
+
+            // Une fois la vidéo prête, appliquer la transition d'opacité
+            setTimeout(() => {
+                videoElement.style.opacity = 1;
+            }, 500); // Petit délai pour laisser le temps au navigateur de charger la vidéo
+        });
+
+        // Masquer le menu déroulant après le choix
+        videoSelector.style.display = 'none';
+    });
+});
