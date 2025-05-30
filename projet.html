@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>monPortfolio</title>
     <link rel="website icon" type="png" href="images/726056.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="multi-layer-stars.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Fond étoilé -->
     <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
     <div id="shooting-star"></div>
     <div id="top"></div>
     <header id="header">
@@ -31,72 +33,140 @@
     </header>
 
     <main>
-        <h2 id="projet" class="titre-section">Mes projets</h2>
+        <h1 id="projet" class="titre-section">Mes compétences et projets</h1>
         <article>
-           <h3>Mes projets</h3>
-           <p>J'ai effectué de nombreux projets dans de nombreux domaines et je vais vous les présenter un à un sur cette page. Si vous voulez plus d'informations sur un projet, cliquez sur "Voir Github".</p>
+           <p>J'ai effectué des projets dans de nombreux domaines durant mon parcours scolaire mais<br> aussi pendant mon temps personnel. Je vais donc les présenter un à un sur cette page. </p>
         </article>
         <section class="web-projects">
-            <div class="project">
-              <img src="images/portfolio.jpg" alt="Capture du projet Portfolio">
-              <h3>Mon Portfolio Web</h3>
-              <p>Site personnel développé en HTML/CSS/JS mettant en valeur mes compétences, mes projets et ma passion pour le design web.</p>
-              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur Github</a>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Portfolio Web</h3>
+                  <p><strong>S</strong> : Besoin d'un site personnel<br><strong>T</strong> : Créer un portfolio clair et design<br><strong>A</strong> : HTML/CSS/JS<br><strong>R</strong> : Site complet et responsive</p>
+                </div>
+                <div class="flip-card-back">
+                  <img src="videos/Portfolio.gif" type="video/gif" alt="Capture du projet Portfolio">
+                  <p>Site personnel mettant en valeur mes compétences, projets et passion pour le design web.</p>
+                  <a href="https://github.com/enzhao08/monPortfolio/" target="_blank">Voir sur Github</a>
+                </div>
+              </div>
             </div>
 
-            <div class="project">
-              <img src="images/javaProject.jpg" alt="Projet de développement">
-              <h3>...</h3>
-              <p>Projet Node.js & Socket.io : une app de messagerie en temps réel avec gestion des utilisateurs et des salons.</p>
-              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur GitHub</a>
-            </div>
-          
-            <div class="project">
-              <img src="images/snakeGame.png" alt="Snake game en C">
-              <h3>Snake Terminal (C)</h3>
-              <p>Jeu Snake codé en C pour le terminal Linux. Génération aléatoire de blocs, collisions et score dynamique. Jeux codé en 4 versions et version automatique.</p>
-              <a href="https://github.com/enzhao08/Snake-game" target="_blank">Voir sur GitHub</a>
-            </div>
-          
-            <div class="project">
-              <img src="images/dockerProjet.jpg" alt="Projet Dockerisé">
-              <h3>Projet Web Dockerisé</h3>
-              <p>Automatisation et conversion de fichiers Web à l'aide de Docker et des langages bash et php ou encore les filtres sur linux.</p>
-              <a href="https://github.com/tonprofil/docker-site" target="_blank">Voir sur Github</a>
-            </div>
-          
-            <div class="project">
-              <img src="images/journal.jpg" alt="Projet journal noir et blanc">
-              <h3>Journal Étudiant</h3>
-              <p>Création graphique d’un journal en équipe en noir et blanc intégrant des jeux, des articles,
-                 et une maquette typographique soignée.<br>Ps : j'ai été le dessinateur des caricatures politiques.</p>
-              <a href="pdf/journal_B1.pdf" target="_blank">Voir le PDF</a>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Réaliser un développement d'application</h3>
+                  <p><strong>S</strong> : Projet de jeu terminal<br><strong>T</strong> : Développer un Snake en C<br><strong>A</strong> : Gestion mémoire, collisions, blocs<br><strong>R</strong> : Jeu fluide manuel avec commandes z, q, s et d</p>
+                </div>
+                <div class="flip-card-back">
+                  <img src="videos/SnakeGame.gif" type="video/gif" alt="Snake game en C">
+                  <p>Jeu Snake en C sur terminal Linux. Génération aléatoire de blocs, collisions et score dynamique.</p>
+                  <a href="https://github.com/enzhao08/Snake-game" target="_blank">Voir sur GitHub</a>
+
+                </div>
+              </div>
             </div>
 
-            <div class="project">
-              <img src="images/BdD.jpeg" alt="Projet Base de donnée">
-              <h3>Base de Donnée étudiant</h3>
-              <p>Création d'une base de donnée et modélisation d'une partie des données nécessaires à l’étude des admissions,
-                des inscriptions et des résultats des étudiants de BUT informatique.</p>
-              <a href="https://github.com/enzhao08/Base-de-donn-e-tudiante" target="_blank">Voir sur Github</a>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Projet Dockerisé</h3>
+                  <p><strong>S</strong> : Automatiser le traitement web<br><strong>T</strong> : Utiliser Docker/Bash<br><strong>A</strong> : Scripts et images dockerisées<br><strong>R</strong> : Processus déployable facilement</p>
+                </div>
+                <div class="flip-card-back">
+                  <img src="videos/Docker.gif" type="video/gif" alt="Projet Dockerisé">
+                  <p>Automatisation de conversion de fichiers web à l'aide de Docker, Bash et PHP.</p>
+                  <a href="https://github.com/tonprofil/docker-site" target="_blank">Voir sur Github</a>
+                </div>
+              </div>
             </div>
 
-            <div class="project">
-              <img src="images/gestion-de-projets.jpg" alt="Projet gestion de projet">
-              <h3>Application "EllaDanse"</h3>
-              <p>Création et rédaction de la note de cadrage et analyse du besoin afin de rédiger la spécification des exigences logicielles.</p>
-              <a href="https://github.com/enzhao08/Gestion-de-projet-EllaDanse-" target="_blank">Voir sur Github</a>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Travailler dans une équipe informatique</h3>
+                  <p><strong>S</strong> : Projet de groupe<br><strong>T</strong> : Créer un journal noir & blanc<br><strong>A</strong> : Rédaction, maquette, dessins<br><strong>R</strong> : Journal complet en PDF</p>
+                </div>
+                <div class="flip-card-back">
+                  <img src="videos/journal.gif" type="video/gif" alt="Projet journal noir et blanc">
+                  <p>Création graphique d’un journal intégrant des jeux, articles, et caricatures politiques.</p>
+                  <a href="pdf/journal_B1.pdf" target="_blank">Voir le PDF</a>
+                </div>
+              </div>
             </div>
 
-            <div class="project">
-              <img src="images/blackHole-projet.jpg" alt="Projet site vitrine trou noir">
-              <h3>Site sur les Trous Noirs</h3>
-              <p>Développement en cours d'un site vitrine sur les trous noirs en HTML et CSS.</p>
-              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur Github</a><br>
-              ou <br>
-              <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir le site</a>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Gérer des données de l'information</h3>
+                  <p><strong>S</strong> : Modéliser des données scolaires<br><strong>T</strong> : Créer un schéma relationnel<br><strong>A</strong> : SQL, MCD, MLD<br><strong>R</strong> : Base fonctionnelle pour admissions</p>
+                </div>
+                <div class="flip-card-back">
+                  <img src="videos/BdD.gif" type="video/gif" alt="Projet Base de donnée">
+                  <p>Base de données pour admissions, inscriptions et résultats des étudiants de BUT.</p>
+                  <a href="https://github.com/enzhao08/Base-de-donn-e-tudiante" target="_blank">Voir sur Github</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h3>Conduite de projet</h3>
+                  <p><strong>S</strong> : Projet gestion de projet<br><strong>T</strong> : Cadrer les besoins<br><strong>A</strong> : Analyse, rédaction SRS<br><strong>R</strong> : Cahier des charges complet</p>
+                </div>
+                <div class="flip-card-back">
+                  <img src="videos/Gp.gif" type="video/gif" alt="Projet gestion de projet">
+                  <p>Rédaction de la note de cadrage et des exigences logicielles pour une application de danse.</p>
+                  <a href="https://github.com/enzhao08/Gestion-de-projet-EllaDanse-" target="_blank">Voir sur Github</a>
+                </div>
+              </div>
             </div>
         </section>
+        <h2>Mes autres projets</h2>
+        <section class="web-projects">
+          
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3>Snake auto</h3>
+                <p><strong>S</strong> : Projet de jeu terminal<br><strong>T</strong> : Développer un Snake en C<br><strong>A</strong> : Gestion mémoire, collisions, blocs<br><strong>R</strong> : Jeu fluide avec version auto</p>
+              </div>
+              <div class="flip-card-back">
+                <img src="videos/SnakeAuto.gif" type="video/gif" alt="Snake automatisé">
+                <p>Développement d'un site vitrine sur les trous noirs en HTML et CSS.</p>
+                <a href="https://github.com/enzhao08?tab=repositories" target="_blank">Voir sur Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3>Application EllaDanse</h3>
+                <p><strong>S</strong> : besoin d'une application de danse<br><strong>T</strong> : Créer une application<br><strong>A</strong> : Java, JavaFX, SceneBuilder<br><strong>R</strong> : Application fonctionnelle de gestion de danse</p>
+              </div>
+              <div class="flip-card-back">
+                <img src="videos/Danse.gif" type="video/gif" alt="Logo EllaDanse">
+                <p>Développement d'une application de danse.</p>
+                <a href="" target="_blank">Voir sur Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h3>Jardiniere Connectée</h3>
+                <p><strong>S</strong> : Automatiser la gestion des plantes<br><strong>T</strong> : Fabriquer la jardinière et développer son automatisation<br><strong>A</strong> : C++, Arduino<br><strong>R</strong> : Jardinière connectée fonctionnelle</p>
+              </div>
+              <div class="flip-card-back">
+                <img src="videos/JardiniereConnectee.gif" type="video/gif" alt="Jardinière Connectée">
+                <p>Creation de zéro d'une Jardiniere et développement de son automatisation.</p>
+                <a href="" target="_blank">Voir sur Github</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         <!-- Section étoiles filantes -->
         <section class="shooting-star">
             <span></span>
@@ -113,19 +183,20 @@
     <footer class="footer">
         <div class="footer-container">
       
-          <!-- Section 1 : Logo -->
-          <div class="footer-logo">
-            <img src="images/logoMoi.png" alt="Logo"/>
-          </div>
+            <!-- Section 1 : Logo -->
+            <div class="footer-logo">
+                <div><img src="images/logo.png" alt="Logo"/></div>
+            </div>
+            
       
           <!-- Section 2 : Navigation -->
           <div class="footer-section">
             <h3>Navigation</h3>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="#projet">Projets</a></li>
+              <li><a href="#top">Accueil</a></li>
+              <li><a href="projet.html">Projets</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="index.html">À propos</a></li>
+              <li><a href="#top">À propos</a></li>
             </ul>
           </div>
       
@@ -133,8 +204,8 @@
           <div class="footer-section">
             <h3>Contact</h3>
             <ul>
-              <li>📧 enzo.annic@orange.fr</li>
-              <li>📍 Lannion, France</li>
+              <li><i class="fa-solid fa-envelope" style="color: orange"></i><a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">enzo.annic@orange.fr</a></li>
+              <li><i class="fa-solid fa-map-pin" style="color: orange"></i> Lannion, France</li>
               <li><a href="contact.html">En savoir plus →</a></li>
               <li><a href="mentions-legales.html">Mentions légales</a></li>
             </ul>
@@ -146,12 +217,20 @@
             <ul class="social-links">
               <li><a href="https://github.com/enzhao08" target="_blank">GitHub</a></li>
               <li><a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">Mail</a></li>
+              <li><a href="pdf/CV_ENZO_ANNIC.pdf" target="_blank">Mon CV</a></li>
             </ul>
-            <p class="quote">"Vers l’infini et au-delà !"</p>
+            <p class="quote">« Il faut être enthousiaste dans <br>son métier pour y exceller. » <br><em>- Denis Diderot</em></p>
           </div>
-      
         </div>
     </footer>
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>À propos des fonds et de la musique</h2>
+            <p>Vous êtes peut être en train de vous dire :<br> Pourquoi ces fonds ? Eh bien parce que j'adore l'espace, tout simplement !<br>Et les musiques ? Connaissez-vous le film Interstellar? Toutes ces musiques et ces fonds viennent ou font référence à ce film qui est IN-CROY-ABLE, et je vous conseille de le regarder. </p>
+        </div>
+    </div>
     <div style="text-align: center; font-size: 12px; background-color: black;">
         © 2025 ANNIC-Enzo. Tous droits réservés.
     </div>
@@ -169,5 +248,6 @@
         canvas.height = window.innerHeight;
       });
     </script>
+     
 </body>
 </html>
