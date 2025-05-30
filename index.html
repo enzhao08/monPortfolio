@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#FF6F00">
     <title>monPortfolio</title>
     <link rel="website icon" type="png" href="images/726056.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="multi-layer-stars.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Fond étoilé -->
     <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
     <div id="shooting-star"></div>
     <div id="top" class="titre-section"></div>
+    <div id="scrollProgress"></div>
     <button class="info-button" onclick="openModal()">i</button>
     <header id="header">
         <nav>
@@ -22,7 +26,7 @@
                 <i id="speakerIcon" class="fa-solid fa-volume-high speaker-icon"></i>
                 <span class="music-text"></span>
             </div>
-            <button class="change-video-btn">Changer le fond d'écran</button>
+            <button class="btn-style wallpaper">Changer le fond d'écran</button>
             <ul>
                 <li><a href="#top">A propos de moi <span></span></a></li>
                 <li><a href="projet.html">Mes projets<span></span></a></li>
@@ -49,32 +53,60 @@
             <div class="descIcon">
                 <div class="description">
                 <h2>Qui suis-je ?</h2>
-                <p>Etudiant en 1<sup>ère</sup> année de BUT informatique, je suis passionné par l'informatique 
-                    et le développement web depuis plusieurs années. Et l'espace aussi... 
-                    mais ça vous l'avez peut-être deviné. Dans ce petit portfolio, vous allez découvrir 
+                <p>Etudiant en BUT informatique, je suis passionné par l'informatique 
+                    et le développement web depuis plusieurs années. Et l'espace aussi... . 
+                    Mais vous l'avez peut-être deviné. Dans ce portfolio, vous allez découvrir 
                     mon univers et tout ce qui m'anime au quotidien.</p>
                 <div class="iconCv">
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61573606267363" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/enzo.080906/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a href="Enzo ANNIC-développeur-web.pdf" download class="btn-cv">Télécharger mon CV ⬇️</a>
+                    <a href="pdf/CV_ENZO_ANNIC.pdf" download class="btn-style">Télécharger mon CV ⬇️</a>
                 </div>      
             </div>    
-            
         </section>
+        <h2>Mes Compétences :</h2>
+        <h3 class="subtitle">En langage informatique</h3>
+        <p style="text-align: center;">Pour plus d'informations, cliquez sur le logo</p>
+        <div class="carousel-skills">
+            <div class="carousel-skills-container">
+                <img src="images/Html.png" class="carousel-skills-item carousel-skills-item-1 skill-logo" alt="HTML" >
+                <img src="images/Css.png" class="carousel-skills-item carousel-skills-item-2 skill-logo" alt="CSS">
+                <img src="images/C_Logo.png" class="carousel-skills-item carousel-skills-item-3 skill-logo" alt="C">
+                <img src="images/Java_Logo.svg.png" class="carousel-skills-item carousel-skills-item-4 skill-logo" alt="Java">
+                <img src="images/JavaScript.png" class="carousel-skills-item carousel-skills-item-5 skill-logo" alt="JavaScript">
+                <img src="images/assembleur.png" class="carousel-skills-item carousel-skills-item-6 skill-logo" alt="Assembleur">
+                <img src="images/Sql.jpg" class="carousel-skills-item carousel-skills-item-6 skill-logo" alt="Sql">
+                <img src="images/Php-logo.png" class="carousel-skills-item carousel-skills-item-7 skill-logo" alt="Php">
+                <img src="images/TutoD-logo.png" class="carousel-skills-item carousel-skills-item-8 skill-logo" alt="Tutod">
+            </div>
+        </div>
+        <h3 class="subtitle">Avec les logiciels</h3>
+        <div class="carousel-appli">
+            <div class="carousel-appli-container">
+                <img src="images/Vsc-logo.png" class="carousel-appli-item carousel-appli-item-1 appli-logo" alt="Vsc" >
+                <img src="images/SqlWorkbench-logo.png" class="carousel-appli-item carousel-appli-item-2 appli-logo" alt="SqlWorkBench">
+                <img src="images/Canva-logo.png" class="carousel-appli-item carousel-appli-item-3 appli-logo" alt="Canva">
+                <img src="images/Eclipse-logo.svg" class="carousel-appli-item carousel-appli-item-4 appli-logo" alt="Eclipse">
+                <img src="images/SceneBuilder-logo.png" class="carousel-appli-item carousel-appli-item-5 appli-logo" alt="SceneBuilder">
+                <img src="images/CiscoPacketTracer-logo.png" class="carousel-appli-item carousel-appli-item-6 appli-logo" alt="CiscoPacketTracer">
+                <img src="images/Excel-logo.png" class="carousel-appli-item carousel-appli-item-7 appli-logo" alt="Excel">
+                <img src="images/Word-logo.png" class="carousel-appli-item carousel-appli-item-8 appli-logo" alt="Word">
+                <img src="images/Figma-logo.png" class="carousel-appli-item carousel-appli-item-9 appli-logo" alt="Figma">
+                <img src="images/logo-arduino.png" class="carousel-appli-item carousel-appli-item-10 appli-logo" alt="Arduino">
+            </div>
+        </div>
         <h2 id="passion" class="titre-section">Mes passions du quotidien</h2>
         <article>
-           <h3>1- Le piano 🎹, ma préférée !</h3>
-           <p>Depuis maintenant deux ans, le piano fait partie intégrante de mon quotidien. 
-            J’ai commencé par curiosité, et très vite, j’ai été captivé par la richesse des émotions 
+           <h3 class="subtitle">1- Le piano <i class="fas fa-music" style="color: #FF6F00"></i>, ma préférée !</h3>
+           <p>Depuis maintenant deux ans, le piano fait partie intégrante de mon quotidien.<br> 
+            J’ai commencé par curiosité, et très vite, j’ai été captivé par la richesse<br> des émotions 
             qu’un simple clavier pouvait transmettre.</p>
-            <p>Au fil du temps, j’ai appris à jouer des morceaux qui me tiennent à cœur, 
+            <p>Au fil du temps, j’ai appris à jouer des morceaux qui me tiennent à cœur,<br>
                à comprendre les nuances, à improviser parfois, et surtout à ressentir la musique.</p>
-            <p>Aujourd’hui, j’ai envie de partager un peu de ce que je sais jouer, 
-                non pas pour impressionner, mais pour transmettre cette passion qui m’anime et, 
+            <p>Aujourd’hui, j’ai envie de partager un peu de ce que je sais jouer, <br>
+                non pas pour impressionner, mais pour transmettre cette passion qui m’anime et,<br> 
                 peut-être, donner à d’autres l’envie de se lancer aussi.</p>
         </article>
         <section class="timeline">
@@ -106,14 +138,14 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                   <h3>Aujourd’hui – Portfolio</h3>
-                  <p>Et Aujourd’hui, je vous montre ce que j'ai apprendre en autodidate durant ces 2 dernières années. Bonne écoute !!</p>
+                  <p>Et Aujourd’hui, je vous montre ce que j'ai pu apprendre en autodidate durant ces 2 dernières années. Bonne écoute !!</p>
                 </div>
                 </div>
         </section>
         <section class="piano-projects">
             <div class="project">
-                <video class="stopMusic" controls>
-                    <source src="videos/capricornTry1.mp4" type="video/mp4">
+                <video class="stopMusic" controls poster="images/capricorn.png">
+                    <source src="videos/Capricorn.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <h3>Capricorn "The Ambitious"<br>by Tony Ann</h3>
@@ -122,7 +154,7 @@
             </div>
         
             <div class="project">
-                <video class="stopMusic" controls>
+                <video class="stopMusic" controls poster="images/aquarius.png">
                     <source src="videos/aquarius.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -133,7 +165,7 @@
         
             <div class="project">
                 <video class="stopMusic" controls poster="images/snow.jpg">
-                    <source src="videos/Snow.mp4" type="video/mp4">
+                    <source src="videos/Snow2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <h3>Snow<br>by Fabrizio Paterlini</h3>
@@ -170,9 +202,28 @@
                 <p>Reprise douce au piano</p>
                 <a href="https://youtu.be/2y_T1iScjd4?si=PqNzEWVko1hQdpq5" target="_blank">Écouter sur Youtube</a>
             </div>
+
+            <div class="project">
+                <video class="stopMusic" controls poster="images/Idea15.jpg">
+                    <source src="videos/Idea15.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Idea 15<br>by Gibran Alcocer</h3>
+                <p>Reprise douce au piano</p>
+                <a href="https://youtu.be/hyUct2htiNk?si=-GLe68XLzyGw3Vb4" target="_blank">Écouter sur Youtube</a>
+            </div>
+
+            <div class="project">
+                <video class="stopMusic" controls poster="">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Autres musiques</h3>
+                <p>Voici quelques autres musiques que j'ai commencé.</p>
+            </div>
         </section>
         <article>
-            <h3>2- Le dessin ✏️, mon enfance</h3>
+            <h3 class="subtitle">2- Le dessin <i class="fas fa-pen" style="color: #FF6F00"></i>, mon enfance</h3>
             <p>Je me suis mis au dessin il y a 18 ans, un peu par curiosité au départ… 
                 et je n’ai jamais arrêté depuis. C’est devenu un vrai moment de plaisir 
                 et de créativité, que ce soit pour poser une idée sur papier ou juste me 
@@ -185,9 +236,17 @@
             <div class="gallery-container">
                 <img class="gallery-item gallery-item-1 image-popup" src="images/dessinCoquillage.jpg" data-index="1" alt="Coquillage">
                 <img class="gallery-item gallery-item-2 image-popup" src="images/dessinPlouf.jpg" data-index="2" alt="Plouf">
-                <img class="gallery-item gallery-item-3 image-popup" src="images/dessinCoffee.jpg" data-index="3" alt="Cafe">
-                <img class="gallery-item gallery-item-4 image-popup" src="images/dessinLambo.jpg" data-index="4" alt="Lamborghini">
-                <img class="gallery-item gallery-item-5 image-popup" src="images/dessinEtang.jpg" data-index="5" alt="Etang">
+                <img class="gallery-item gallery-item-3 image-popup" src="images/Maison.jpg" data-index="3" alt="Maison">
+                <img class="gallery-item gallery-item-4 image-popup" src="images/Squelette.jpg" data-index="4" alt="Squelette">
+                <img class="gallery-item gallery-item-5 image-popup" src="images/Falaise.jpg" data-index="5" alt="Falaise">
+                <img class="gallery-item gallery-item-6 image-popup" src="images/Rose.jpg" data-index="6" alt="Rose">
+                <img class="gallery-item gallery-item-7 image-popup" src="images/dessinCoffee.jpg" data-index="7" alt="Cafe">
+                <img class="gallery-item gallery-item-8 image-popup" src="images/dessinLambo.jpg" data-index="8" alt="Lamborghini">
+                <img class="gallery-item gallery-item-9 image-popup" src="images/dessinEtang.jpg" data-index="9" alt="Etang">
+                <img class="gallery-item gallery-item-10 image-popup" src="images/Gateau.jpg" data-index="10" alt="gateau">
+                <img class="gallery-item gallery-item-11 image-popup" src="images/Lampadaire.jpg" data-index="11" alt="banc-lampadaire">
+                <img class="gallery-item gallery-item-12 image-popup" src="images/Mer.jpg" data-index="12" alt="mer-balcon">
+                <img class="gallery-item gallery-item-13 image-popup" src="images/Calin.jpg" data-index="13" alt="calin">
                 <p class="text-info">Cliquez sur une image pour l'agrandir</p>
             </div>
             <div class="gallery-controls">
@@ -212,20 +271,23 @@
                 <li><a href="videos/Nebula1.mp4" data-video="Nebula1.mp4">Vidéo 5</a></li>
                 <li><a href="videos/Nebula2.mp4" data-video="Nebula2.mp4">Vidéo 6</a></li>
                 <li><a href="videos/FondGalawy1.mp4" data-video="FondGalawy1.mp4">Vidéo 7</a></li>
+                <li><a href="videos/SolarSystem.mp4" data-video="SolarSystem.mp4">Vidéo 8</a></li>
+                <li><a href="videos/Black-Hole3.mp4" data-video="Black-Hole3.mp4">Vidéo 9</a></li>
+                <li><a href="" data-video="">Aucun</a></li>
             </ul>
         </div>
 
         <video id="background-video" autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" style="pointer-events: none;">
             <source src="videos/black-hole.mp4" type="video/mp4" loop>
         </video>
-        <audio id="musiqueFond" src="videos/Interstellar.mp3" loop></audio>
+        <audio id="musiqueFond" src="videos/Interstellar2.mp3" loop></audio>
     </main>
     <footer class="footer">
         <div class="footer-container">
       
             <!-- Section 1 : Logo -->
             <div class="footer-logo">
-                <div onclick="openModal1()"><img src="images/logoMoi.png" alt="Logo"/></div>
+                <div onclick="openModal1()"><img src="images/logo.png" alt="Logo"/></div>
                 <p>cliquez sur le logo pour en savoir plus →</p>
             </div>
             
@@ -245,8 +307,8 @@
           <div class="footer-section">
             <h3>Contact</h3>
             <ul>
-              <li>📧 enzo.annic@orange.fr</li>
-              <li>📍 Lannion, France</li>
+              <li><i class="fa-solid fa-envelope" style="color: orange"></i><a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">enzo.annic@orange.fr</a></li>
+              <li><i class="fa-solid fa-map-pin" style="color: orange"></i> Lannion, France</li>
               <li><a href="contact.html">En savoir plus →</a></li>
               <li><a href="mentions-legales.html">Mentions légales</a></li>
             </ul>
@@ -258,8 +320,10 @@
             <ul class="social-links">
               <li><a href="https://github.com/enzhao08" target="_blank">GitHub</a></li>
               <li><a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">Mail</a></li>
+              <li><a href="pdf/CV_ENZO_ANNIC.pdf" target="_blank">Mon CV</a></li>
             </ul>
-            <p class="quote">"Vers l’infini et au-delà !"</p>
+            <p class="quote">« Il faut être enthousiaste dans <br>son métier pour y exceller. » <br><em>- Denis Diderot</em></p>
           </div>
       
         </div>
@@ -268,20 +332,19 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
             <h2>À propos des fonds et de la musique</h2>
-            <p>Vous êtes peut être en train de vous dire :<br> Pourquoi ces fonds ? Eh bien parce que j'adore l'espace, tout simplement !<br>Et les musiques ? Connaissez-vous le film Interstellar? Toutes mes musiques et ces fonds viennent ou font référence à ce film qui est IN-CROY-ABLE, et je vous conseille de le regarder. </p>
+            <p>Vous êtes peut être en train de vous dire :<br> Pourquoi ces fonds ? Eh bien parce que j'adore l'espace, tout simplement !<br>Et les musiques ? Connaissez-vous le film Interstellar? Toutes ces musiques et ces fonds viennent ou font référence à ce film qui est IN-CROY-ABLE, et je vous conseille de le regarder. </p>
         </div>
     </div>
     <div id="infoModal1" class="modal1">
         <div class="modal-content1">
             <span class="close-btn1" onclick="closeModal1()">&times;</span>
             <h2>À propos de mon logo</h2>
-            <p>Ce logo réunit mes initiales E et A, subtilement intégrées dans une composition moderne où chaque élément a une signification :<br>
-                - E évoque l’énergie, l’évolution personnelle et la curiosité intellectuelle.<br>
-                - A symbolise l’ambition, l’authenticité et l’ascension dans mes projets.<br>
-                - La flèche quant à elle représente le mouvement constant vers l’avant, l’objectif, la progression et la vision.</p>
+            <p>Ce logo réunit mes initiales E et A où chaque élément a une signification :<br>
+                - E évoque l’énergie, l’évolution personnelle<br>
+                - A symbolise l’ambition, l’authenticité et l’ascension dans mes projets.
         </div>
     </div>
-    <div style="text-align: center; font-size: 12px; background-color: black;">
+    <div style="text-align: center; font-size: 12px; background-color: #000000">
         © 2025 ANNIC-Enzo. Tous droits réservés.
     </div>
     <div class="popup-overlay" id="popupOverlay">
