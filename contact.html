@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>monPortfolio</title>
     <link rel="website icon" type="png" href="images/726056.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="multi-layer-stars.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- Fond étoilé -->
     <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
     <div id="shooting-star"></div>
     <div id="top"></div>
     <header id="header">
@@ -31,34 +33,40 @@
     </header>
 
     <main>
-        <h2 id="contact" class="titre-section">Contact</h2>
+        <h1 id="contact" class="titre-section">Contact</h1>
         <div class="contact-container">
             <!-- Formulaire -->
-            <form>
+            <form action="https://formspree.io/f/xzzrkvpv" method="POST">
                 <fieldset>
-                    <label>Nom* : <input type="text" placeholder="Entrez votre nom" required></label><br><br>
-                    <label>Prénom* : <input type="text" placeholder="Entrez votre prénom" required></label><br><br>
-                    <label>Adresse e-mail* : <input type="email" placeholder="Entrez votre adresse e-mail" required></label><br><br>
-                    <label>Téléphone : <input type="tel" placeholder="Entrez votre numéro de téléphone"></label><br><br>
+                    <label>Nom* : <input type="text" name="nom" placeholder="Entrez votre nom" required></label><br><br>
+                    <label>Prénom* : <input type="text" name="prenom" placeholder="Entrez votre prénom" required></label><br><br>
+                    <label>Adresse e-mail* : <input type="email" name="mail" placeholder="Entrez votre adresse e-mail" required></label><br><br>
+                    <label>Téléphone : <input type="tel" name="tel" placeholder="Entrez votre numéro de téléphone"></label><br><br>
+                    <label>Objet : <input list="object" name="nature" placeholder="Entrez la nature de votre contact"></label><br><br>
+                    <datalist id="object">
+                      <option value="Candidature"></option>
+                      <option value="Emploi saisonnier"></option>
+                      <option value="Personnel"></option>
+                      <option value="Alternance"></option>
+                    </datalist>
+                    <label>Message* :<br><textarea name="message" placeholder="Écrivez votre message ici..."  required></textarea></label><br>
+                    
                     <span>*champs obligatoires</span>
                 </fieldset>
-        
                 <div class="confirmation">
-                    <label><input type="checkbox" required> J'accepte les conditions d'utilisation.</label>
-                    <button type="submit">Envoyer</button>
+                    <button type="submit" class="btn-style">Envoyer</button>
                 </div>
             </form>
         
             <!-- Bloc Infos de contact -->
             <div class="contact-info">
                 <h2>Informations de contact</h2>
-                <p><strong>📍 Adresse :</strong> Rue Edouard Branly, 22300 Lannion</p>
-                <p><strong>📧 Email :</strong> enzo.annic@orange.fr</p>
-                <p><strong>📞 Téléphone :</strong> +33 7 84 82 72 65</p>
-                <p><strong>🕒 Horaires :</strong> Lundi à Vendredi, 8h - 17h45</p>
+                <p><strong><i class="fas fa-map-pin" style="color:orange;"></i> Adresse :</strong><a href="https://www.google.com/maps?q=48.757823,-3.452722" target="_blank">Rue Edouard Branly, 22300 Lannion</a></p>
+                
+                <p><strong><i class="fas fa-envelope" style="color: orange;"></i> Email :</strong> <a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">enzo.annic@orange.fr</a></p>
+                <p><strong><i class="fas fa-mobile-alt" style="color: orange;"></i>  Téléphone :</strong> <a href="tel:0784827265">+33 7 84 82 72 65</a></p>
+                <p><strong><i class="fas fa-clock" style="color: orange;"></i> Horaires :</strong> Lundi à Vendredi, 8h15 - 17h45</p>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61573606267363" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/enzo.080906/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
@@ -75,24 +83,25 @@
         <video id="background-video" autoplay muted loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" style="pointer-events: none;" class="video">
 			<source src="videos/black-hole2.mp4" type="video/mp4" loop></source>
 		</video>
-        <audio id="musiqueFond" src="videos/InterstellarExperience.mp3" loop></audio>
+        <audio id="musiqueFond" src="videos/Interstellar.mp3" loop></audio>
     </main>
     <footer class="footer">
         <div class="footer-container">
       
-          <!-- Section 1 : Logo -->
-          <div class="footer-logo">
-            <img src="images/logoMoi.png" alt="Logo"/>
-          </div>
+            <!-- Section 1 : Logo -->
+            <div class="footer-logo">
+                <div><img src="images/logo.png" alt="Logo"/></div>
+            </div>
+            
       
           <!-- Section 2 : Navigation -->
           <div class="footer-section">
             <h3>Navigation</h3>
             <ul>
-              <li><a href="index.html">Accueil</a></li>
+              <li><a href="#top">Accueil</a></li>
               <li><a href="projet.html">Projets</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="index.html">À propos</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#top">À propos</a></li>
             </ul>
           </div>
       
@@ -100,8 +109,9 @@
           <div class="footer-section">
             <h3>Contact</h3>
             <ul>
-              <li>📧 enzo.annic@orange.fr</li>
-              <li>📍 Lannion, France</li>
+              <li><i class="fa-solid fa-envelope" style="color: orange"></i><a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">enzo.annic@orange.fr</a></li>
+              <li><i class="fa-solid fa-map-pin" style="color: orange"></i> Lannion, France</li>
+              
               <li><a href="contact.html">En savoir plus →</a></li>
               <li><a href="mentions-legales.html">Mentions légales</a></li>
             </ul>
@@ -113,8 +123,10 @@
             <ul class="social-links">
               <li><a href="https://github.com/enzhao08" target="_blank">GitHub</a></li>
               <li><a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto:enzo.annic@orange.fr?subject=%C3%89change%20et%20contact" target="_blank">Mail</a></li>
+              <li><a href="pdf/CV_ENZO_ANNIC.pdf" target="_blank">Mon CV</a></li>
             </ul>
-            <p class="quote">"Vers l’infini et au-delà !"</p>
+            <p class="quote">« Il faut être enthousiaste dans <br>son métier pour y exceller. » <br><em>- Denis Diderot</em></p>
           </div>
       
         </div>
