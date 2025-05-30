@@ -3,7 +3,7 @@ const textElement = document.getElementById('text');
 const cursorElement = document.getElementById('cursor');
 
 if (textElement && cursorElement) {
-    const words = ["Alternance Développeur Web", "Développeur Front-End"];
+    const words = ["Recherche alternance", "Développement Web", "Front-End, Back-End"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -35,64 +35,49 @@ const audio = document.getElementById('musiqueFond');
 const speakerIcon = document.getElementById('speakerIcon');
 const stopVideos = document.querySelectorAll('.stopMusic');
 
-audio.volume = 0.3;
+audio.volume = 0.2;
 
 let userMuted = false;
 
 // Bouton mute / unmute
 speakerIcon.addEventListener('click', () => {
-    if (audio.paused) {
-      userMuted = false;
-      audio.play().catch(err => console.warn("Lecture audio bloquée :", err));
-      speakerIcon.classList.remove('fa-volume-xmark');
-      speakerIcon.classList.add('fa-volume-high');
-    } else {
-      userMuted = true;
-      audio.pause();
-      speakerIcon.classList.remove('fa-volume-high');
-      speakerIcon.classList.add('fa-volume-xmark');
-    }
-});
-
-// Vérifie si une vidéo de classe stopMusic joue
-function isAnyVideoPlaying() {
-return Array.from(stopVideos).some(video => !video.paused && !video.ended);
-}
-
-// Reprend la musique si aucune vidéo ne joue
-function resumeIfNoVideoPlaying() {
-if (!isAnyVideoPlaying() && !userMuted) {
-    audio.play().catch(err => console.warn("Reprise audio bloquée :", err));
+  if (audio.paused) {
+    userMuted = false;
+    audio.play().catch(err => console.warn("Lecture audio bloquée :", err));
     speakerIcon.classList.remove('fa-volume-xmark');
     speakerIcon.classList.add('fa-volume-high');
-}
-}
+  } else {
+    userMuted = true;
+    audio.pause();
+    speakerIcon.classList.remove('fa-volume-high');
+    speakerIcon.classList.add('fa-volume-xmark');
+  }
+});
 
-// Gère le comportement de toutes les vidéos avec la classe .stopMusic
+// Stoppe la musique si une vidéo est jouée
 stopVideos.forEach(video => {
-video.addEventListener('play', () => {
-    // Stoppe les autres vidéos .stopMusic sauf celle qui vient de jouer
+  video.addEventListener('play', () => {
     stopVideos.forEach(otherVideo => {
-    if (otherVideo !== video && !otherVideo.paused) {
+      if (otherVideo !== video && !otherVideo.paused) {
         otherVideo.pause();
-    }
+      }
     });
-
     audio.pause(); // Coupe la musique
+  });
+
+  // Ne fait plus rien à la pause ou fin d'une vidéo
 });
 
-video.addEventListener('pause', resumeIfNoVideoPlaying);
-video.addEventListener('ended', resumeIfNoVideoPlaying);
-});
+// Stoppe la musique si on clique sur un lien externe
 document.querySelectorAll('a[href]').forEach(link => {
-link.addEventListener('click', event => {
+  link.addEventListener('click', event => {
     const url = new URL(link.href);
     const currentHost = window.location.host;
 
     if (url.host !== currentHost) {
-        audio.pause(); // Stoppe la musique avant de quitter
+      audio.pause(); // Stoppe la musique avant de quitter
     }
-});
+  });
 });
 
 //gère le scroll du header
@@ -181,10 +166,12 @@ class Carousel {
 }
 
 // Création et lancement du carrousel
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-exampleCarousel.setControls();
-exampleCarousel.useControls();
-exampleCarousel.updateGallery(); // ajoute ça pour forcer l’état initial
+if (galleryContainer && galleryControlsContainer && galleryItems.length > 0) {
+  const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+  exampleCarousel.setControls();
+  exampleCarousel.useControls();
+  exampleCarousel.updateGallery();
+}
 
 
 // Récupère tous les liens ou images avec la classe image-popup
@@ -365,15 +352,18 @@ items.forEach(item => observer.observe(item));
 
 
 
-const btn = document.querySelector('.change-video-btn');
+const btn = document.querySelector('.wallpaper');
 const videoSelector = document.querySelector('.video-selector');
 const videoElement = document.getElementById('background-video');  // Assure-toi que l'ID correspond ici
 const videoLinks = document.querySelectorAll('.video-selector a');
 
 // Afficher/masquer le menu déroulant
-btn.addEventListener('click', () => {
-    videoSelector.style.display = videoSelector.style.display === 'block' ? 'none' : 'block';
-});
+if(btn){
+   btn.addEventListener('click', () => {
+        videoSelector.style.display = videoSelector.style.display === 'block' ? 'none' : 'block';
+    }); 
+}
+    
 
 // Changer la vidéo au clic
 videoLinks.forEach(link => {
@@ -383,7 +373,7 @@ videoLinks.forEach(link => {
         // Récupérer la nouvelle vidéo à charger
         const newVideo = e.target.getAttribute('data-video');
 
-        // Masquer la vidéo pendant le changement (pas d'animation encore)
+        // Masquer la c:\Users\enzoa\Downloads\image-removebg-preview (27).pngvidéo pendant le changement (pas d'animation encore)
         videoElement.style.opacity = 0; 
 
         // Changer la source de la vidéo
@@ -406,4 +396,123 @@ videoLinks.forEach(link => {
         // Masquer le menu déroulant après le choix
         videoSelector.style.display = 'none';
     });
+});
+
+//Compétences popup
+document.querySelectorAll('.skill-logo').forEach(img => {
+  img.addEventListener('click', () => {
+    const tech = img.alt.toLowerCase();
+    console.log(`Clicked on ${tech}`);  // Ajoute ce log pour vérifier
+    const links = {
+      html: 'https://developer.mozilla.org/fr/docs/Web/HTML',
+      css: 'https://developer.mozilla.org/fr/docs/Web/CSS',
+      c: 'https://fr.wikipedia.org/wiki/C_(langage)',
+      java: 'https://www.oracle.com/fr/java/',
+      javascript: 'https://developer.mozilla.org/fr/docs/Web/JavaScript',
+      assembleur: 'https://fr.wikipedia.org/wiki/Assembleur',
+      sql: 'https://fr.wikipedia.org/wiki/Structured_Query_Language',
+      php: 'https://www.php.net',
+      tutod: 'https://fr.wikipedia.org/wiki/Tutorial_D',
+    };
+    const link = links[tech];
+    if (link) {
+      window.open(link, '_blank');
+    }
+  });
+});
+
+
+//Carousel Langage Informatique
+const skillsItems = document.querySelectorAll('.carousel-skills-item');
+let skillsArray = Array.from(skillsItems);
+
+function updateSkillsCarousel() {
+    skillsArray = skillsArray.filter(el => el !== undefined && el !== null);
+    skillsArray.forEach((el, i) => {
+        if (!el) return; // Ignore undefined/null
+        el.className = 'carousel-skills-item';
+        if (i < 5) {
+            el.classList.add(`carousel-skills-item-${i + 1}`);
+        }
+    });
+}
+setInterval(() => {
+  skillsArray.push(skillsArray.shift());
+  updateSkillsCarousel();
+}, 2500);
+updateSkillsCarousel();
+
+//Application
+document.querySelectorAll('.appli-logo').forEach(img => {
+  img.addEventListener('click', () => {
+    const tech = img.alt.toLowerCase();
+    console.log(`Clicked on ${tech}`);  // Ajoute ce log pour vérifier
+    const links = {
+      vsc: 'https://code.visualstudio.com',
+      sqlworkbench: 'https://www.mysql.com/products/workbench/',
+      canva: 'https://www.canva.com',
+      eclipse: 'https://eclipseide.org',
+      scenebuilder: 'https://gluonhq.com/products/scene-builder/',
+      ciscopackettracer: 'https://www.netacad.com/fr/cisco-packet-tracer',
+      excel: 'https://www.microsoft.com/fr-fr/microsoft-365/excel',
+      word: 'https://www.microsoft.com/fr-fr/microsoft-365/word',
+      figma: 'https://www.figma.com/fr-fr/',
+      arduino: 'https://www.arduino.cc',
+    };
+    const link = links[tech];
+    if (link) {
+      window.open(link, '_blank');
+    }
+  });
+});
+
+
+//Carousel Langage Informatique
+const appliItems = document.querySelectorAll('.carousel-appli-item');
+let appliArray = Array.from(appliItems);
+
+function updateAppliCarousel() {
+    appliArray = appliArray.filter(el => el !== undefined && el !== null);
+    appliArray.forEach((el, i) => {
+        if (!el) return; // Ignore undefined/null
+        el.className = 'carousel-appli-item';
+        if (i < 5) {
+            el.classList.add(`carousel-appli-item-${i + 1}`);
+        }
+    });
+}
+setInterval(() => {
+  appliArray.push(appliArray.shift());
+  updateAppliCarousel();
+}, 2500);
+updateAppliCarousel();
+
+//Scrolling Avancement
+window.addEventListener('scroll', () => {
+  const scrollBar = document.getElementById('scrollProgress');
+  if (!scrollBar) return; // On sort si pas trouvé
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  scrollBar.style.width = scrollPercent + "%";
+});
+
+// Script pour gérer le retournement des cartes
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.flip-card').forEach(card => {
+    const inner = card.querySelector('.flip-card-inner');
+    card.addEventListener('click', () => {
+      inner.classList.toggle('is-flipped');
+    });
+  });
+});
+
+//Cards angle de retournement
+document.querySelectorAll('.flip-card').forEach(card => {
+  let angle = 0;
+  const inner = card.querySelector('.flip-card-inner');
+  card.addEventListener('click', () => {
+    angle += 180;
+    inner.style.transform = `rotateY(${angle}deg)`;
+  });
 });
