@@ -254,6 +254,12 @@ nav ul li a:hover span {
 #text {
 	display: inline-block;
 }
+.typing-container {
+  min-width: 300px; /* ou la largeur de ton mot le plus long */
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
 #cursor {
 	display: inline-block;
 	animation: blink 0.7s infinite;
