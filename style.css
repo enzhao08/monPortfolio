@@ -1115,3 +1115,14 @@ fieldset span {
 	.carousel-appli-item{height: 90px;}
 	.gallery-item{height: 150px;}
 }
+
+@media (max-width: 480px) {
+	.info-button {
+    	width: 16px;
+    	height: 16px;
+    	font-size: 14px;
+  }
+  	.carousel-skills-item{height: 70px;}
+	.carousel-appli-item{height: 70px;}
+	.gallery-item{height: 120px;}
+}
