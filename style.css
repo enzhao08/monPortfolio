@@ -20,6 +20,7 @@ body {
 	cursor: url(images/cursorFinal.png), auto;
 	height: 100%;
 	width: 100%;
+	background-attachment: fixed;
 }
 
 header {
@@ -349,7 +350,22 @@ main > article{
   transform: translateX(-50%);
 }
 /*************************************************/
-
+.carousel-skills, .carousel-appli {
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-skills-container,
+.carousel-appli-container {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.skill-logo, .appli-logo {
+  width: auto;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
 /******************Application********************/
 /******************Compétences********************/
 .carousel-appli {
