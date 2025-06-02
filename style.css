@@ -18,6 +18,7 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	cursor: url(images/cursorFinal.png), auto;
+	height: 100%;
 }
 
 header {
@@ -26,6 +27,14 @@ header {
 	z-index: 100;
 	background: transparent;
 	transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* force la hauteur minimale à 100% de la fenêtre */
+}
+main {
+  flex: 1; /* prend tout l’espace disponible entre header et footer */
 }
 header.scrolled {
 	background-color: rgba(0, 0, 0, 0.6);
@@ -269,10 +278,6 @@ main>h2 {
 main > article{
 	margin: auto;
 	width: 50%;
-	text-align: center;
-}
-main>article>p{
-	text-align: left;
 }
 .subtitle{
 	text-align: center;
@@ -408,6 +413,9 @@ main>article>p{
 	z-index: 0;
 	border-radius: 15px;
 	background-size: contain;
+}
+.gallery-item {
+	cursor: pointer;
 }
 .gallery-item-1 {
 	left: 15%;
@@ -596,6 +604,7 @@ main>article>p{
 .project {
 	background-color: rgba(0, 0, 0, 0.4);
 	backdrop-filter: blur(5px);
+	border: 1px solid #FFFFFF;
 	padding: 20px;
 	border-radius: 12px;
 	text-align: center;
@@ -605,6 +614,7 @@ main>article>p{
 	transform: scale(1.05);
 	box-shadow: 0 0 20px #FF6F00;
 	background-color: rgba(0, 0, 0, 1);
+	border: none;
 }
 .project img {
 	max-width: 100%;
@@ -681,7 +691,7 @@ main>article>p{
 }
 /*************************************/ 
 /****************Changement fond***********/ 
-#background-video {
+#background-image {
     position: fixed;
     top: 0;
     left: 0;
@@ -691,15 +701,13 @@ main>article>p{
     z-index: -2;
     opacity: 1;
     filter: brightness(0.3);
-}
-#background-video.playing {
-    opacity: 1; /*La vidéo devient visible après le chargement */
+	transition: opacity 0.3s ease;
 }
   
-.video-selector {
+.image-selector {
     display: none;
     position: fixed;
-    top: 100px;
+    top: 122px;
     left: 0;
     background: rgba(0, 0, 0, 0.7);
 	backdrop-filter: blur(5px);
@@ -708,22 +716,22 @@ main>article>p{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	z-index: 2;
 }
-.video-selector ul {
+.image-selector ul {
     list-style: none;
     padding: 0;
 	display: flex;
-  	flex-direction: row;
+  	flex-direction: column;
 	gap: 10px;
   	flex-wrap: wrap;
 }
-.video-selector ul li a {
+.image-selector ul li a {
     display: block;
     color: #FF6F00;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
-.video-selector ul li a:hover {
+.image-selector ul li a:hover {
     color: #fff;
 }
 /***************************************/
