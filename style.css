@@ -431,13 +431,16 @@ main > article{
 	margin: 0 auto;
 	max-width: 1000px;
 	position: relative;
+	overflow: hidden; /* Empêche le débordement visuel */
+	backface-visibility: hidden; /* Réduction des artefacts de transition */
+    	will-change: transform; /* Optimise le rendu GPU */
 }
 .gallery-item {
-	height: 200px;
+	max-width: 250px;
+    	height: auto;
 	opacity: 0;
 	position: absolute;
 	transition: all 0.3s ease-in-out;
-	width: auto;
 	z-index: 0;
 	border-radius: 15px;
 	background-size: contain;
