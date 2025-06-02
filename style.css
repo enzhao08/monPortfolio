@@ -187,12 +187,15 @@ nav ul li a:hover span {
   color: #FF6F00;
   font-family: 'Orbitron', sans-serif;
   margin-top: 20px;
-  min-width: 320px;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
+  width: 30ch;
   text-align: center;
-  width: 100%;
+}
+.typewriter-wrapper {
+  display: flex;
+  justify-content: center;
 }
 .presentation {
 	display: flex;
