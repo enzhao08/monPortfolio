@@ -437,7 +437,7 @@ main > article{
 }
 .gallery-item {
 	max-width: 250px;
-    	height: auto;
+    	max-height: 250px;
 	opacity: 0;
 	position: absolute;
 	transition: all 0.3s ease-in-out;
