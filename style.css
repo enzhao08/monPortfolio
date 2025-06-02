@@ -183,10 +183,16 @@ nav ul li a:hover span {
 	margin: 0;
 }
 .typewriter {
-	font-size: 2.5rem;
-	color: #FF6F00;
-	font-family: 'Orbitron', sans-serif;
-	margin-top: 20px;
+  font-size: 2.5rem;
+  color: #FF6F00;
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 20px;
+  min-width: 320px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
 }
 .presentation {
 	display: flex;
@@ -253,12 +259,6 @@ nav ul li a:hover span {
 }
 #text {
 	display: inline-block;
-}
-.typing-container {
-  min-width: 300px; /* ou la largeur de ton mot le plus long */
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
 }
 #cursor {
 	display: inline-block;
