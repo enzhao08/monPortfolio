@@ -65,6 +65,7 @@
                             <a href="https://www.linkedin.com/in/enzo-annic-2a0623346/" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </div>
                         <a href="pdf/CV_ENZO_ANNIC.pdf" download class="btn-style">Télécharger mon CV ⬇️</a>
+                        <button class="btn-style" id="openBusinessCard">Voir ma carte de visite</button>
                     </div>
                 </div>   
             </div>
@@ -326,6 +327,19 @@
       
         </div>
     </footer>
+    <div class="modal-business" id="businessCardModal">
+        <div class="modal-business-content">
+            <div class="close-business" id="closeBusinessCard">&times;</div>
+            <div class="flip-card-business" id="businessCard">
+                <div class="flip-card-face front">
+                    <img src="images/Recto.png" alt="Recto de la carte">
+                </div>
+                <div class="flip-card-face back">
+                    <img src="images/Verso.png" alt="Verso de la carte">
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="infoModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
