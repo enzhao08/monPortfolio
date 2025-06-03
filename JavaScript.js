@@ -353,48 +353,37 @@ items.forEach(item => observer.observe(item));
 
 
 const btn = document.querySelector('.wallpaper');
-const videoSelector = document.querySelector('.video-selector');
-const videoElement = document.getElementById('background-video');  // Assure-toi que l'ID correspond ici
-const videoLinks = document.querySelectorAll('.video-selector a');
+const imageSelector = document.querySelector('.image-selector');
+const imageElement = document.getElementById('background-image');
+const imageLinks = document.querySelectorAll('.image-selector a');
 
 // Afficher/masquer le menu déroulant
-if(btn){
-   btn.addEventListener('click', () => {
-        videoSelector.style.display = videoSelector.style.display === 'block' ? 'none' : 'block';
-    }); 
+if (btn) {
+    btn.addEventListener('click', () => {
+        imageSelector.style.display = (imageSelector.style.display === 'block') ? 'none' : 'block';
+    });
 }
-    
 
-// Changer la vidéo au clic
-videoLinks.forEach(link => {
+// Changer l’image au clic
+imageLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // éviter le comportement par défaut (rechargement)
+        e.preventDefault();
 
-        // Récupérer la nouvelle vidéo à charger
-        const newVideo = e.target.getAttribute('data-video');
+        const newImage = e.target.getAttribute('data-image');
 
-        // Masquer la c:\Users\enzoa\Downloads\image-removebg-preview (27).pngvidéo pendant le changement (pas d'animation encore)
-        videoElement.style.opacity = 0; 
+        // Effet fondu si souhaité
+        imageElement.style.opacity = 0;
 
-        // Changer la source de la vidéo
-        videoElement.querySelector('source').src = `videos/${newVideo}`;
+        setTimeout(() => {
+            if (newImage) {
+                imageElement.src = `images/${newImage}`;
+            } else {
+                imageElement.src = ""; // ou une image par défaut
+            }
+            imageElement.style.opacity = 1;
+        }, 300); // délai pour le fondu
 
-        // Recharger et démarrer la vidéo
-        videoElement.load();
-
-        // Une fois la vidéo chargée, ajouter la classe "playing" pour l'animation
-        videoElement.addEventListener('loadeddata', () => {
-            videoElement.play(); // Lance la vidéo dès qu'elle est prête
-            videoElement.classList.add('playing'); // Appliquer la transition de fondu en arrière-plan
-
-            // Une fois la vidéo prête, appliquer la transition d'opacité
-            setTimeout(() => {
-                videoElement.style.opacity = 1;
-            }, 500); // Petit délai pour laisser le temps au navigateur de charger la vidéo
-        });
-
-        // Masquer le menu déroulant après le choix
-        videoSelector.style.display = 'none';
+        imageSelector.style.display = 'none';
     });
 });
 
