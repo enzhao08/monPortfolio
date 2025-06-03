@@ -516,3 +516,26 @@ document.querySelectorAll('.flip-card').forEach(card => {
     inner.style.transform = `rotateY(${angle}deg)`;
   });
 });
+
+
+//MODAL CARTE DE VISITE
+document.getElementById("openBusinessCard").onclick = () => {
+  document.getElementById("businessCardModal").style.display = "flex";
+};
+
+document.getElementById("closeBusinessCard").onclick = () => {
+  document.getElementById("businessCardModal").style.display = "none";
+  document.getElementById("businessCard").classList.remove("flip");
+};
+
+document.getElementById("businessCard").onclick = () => {
+  document.getElementById("businessCard").classList.toggle("flip");
+};
+
+window.onclick = (e) => {
+  const modal = document.getElementById("businessCardModal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.getElementById("businessCard").classList.remove("flip");
+  }
+};
