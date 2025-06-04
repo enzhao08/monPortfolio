@@ -1197,5 +1197,5 @@ fieldset span {
 	.carousel-appli-item{height: 50px;}
 	.gallery-item{height: 100px;}
 
-	.gallery-controls button {font-size: 30px;}
+	.gallery-controls button, .gallery-controls-précédent, .gallery-controls-suivant {font-size: 30px;}
 }
