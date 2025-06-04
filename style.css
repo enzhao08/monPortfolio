@@ -1221,4 +1221,17 @@ fieldset span {
 	.gallery-controls-suivant:hover::before {
 		right: -25px;
 	}
+	.modal-business-content {
+    		width: 90%;
+    		height: 250px;
+	}	
+	.close-business {
+		font-size: 1.5em;
+		top: -30px;
+		right: -10px;
+	}
+	.flip-card-face img {
+		object-fit: cover;
+		object-position: center;
+	}
 }
