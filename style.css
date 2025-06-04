@@ -1197,5 +1197,28 @@ fieldset span {
 	.carousel-appli-item{height: 50px;}
 	.gallery-item{height: 100px;}
 
-	.gallery-controls button, .gallery-controls-précédent, .gallery-controls-suivant {font-size: 30px;}
+	.gallery-controls button {
+		font-size: 18px; /* Réduit la taille du texte */
+		margin: 0 20px;
+	}
+	.gallery-controls-précédent::before,
+	.gallery-controls-suivant::before {
+		padding: 6px;
+		width: 4px;
+		height: 4px;
+		border-width: 0 3px 3px 0;
+	}
+	.gallery-controls-précédent::before {
+		left: -20px;
+	}
+	.gallery-controls-précédent:hover::before {
+		left: -25px;
+	}
+	.gallery-controls-suivant::before {
+		right: -20px;
+		top: 40px; /* ajuste si besoin */
+	}
+	.gallery-controls-suivant:hover::before {
+		right: -25px;
+	}
 }
