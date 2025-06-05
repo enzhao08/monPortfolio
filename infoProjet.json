@@ -1,0 +1,162 @@
+[
+  {
+    "id": "portfolio",
+    "titre": "Portfolio",
+    "objectif": "Concevoir un site web personnel",
+    "description": "Projet de coder un site web en HTML/CSS/JS en solo.",
+    "contributions": "Tous le site web de A à Z",
+    "competences": ["HTML", "CSS", "JS", "JSON", "Débogage", "Présentation"],
+    "github": "https://github.com/enzhao08/monPortfolio/",
+    "image": "images/Portfolio.png",
+    "languages": [
+      { "nom": "HTML", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png?f=webp" },
+      { "nom": "CSS", "logo": "https://cdn-icons-png.freepik.com/512/732/732190.png" },
+      { "nom": "JavaScript", "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+      { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
+      { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
+      { "nom": "Netlify", "logo": "https://www.netlify.com/v3/img/components/logomark.png" },
+      { "nom": "NameCheap", "logo": "https://logo.clearbit.com/namecheap.com" }
+      
+    ]
+  },
+  {
+    "id": "snake",
+    "titre": "Réalisation d'un jeu Snake en C",
+    "objectif": "Développer un jeu en C dans le terminal",
+    "description": "Projet de développement d’un jeu Snake dans le terminal, en lien avec la SAE sur le développement d'application.",
+    "contributions": "Programmation en C, gestion des collisions, des blocs et du rendu texte.",
+    "competences": ["C", "Gestion mémoire", "Développement terminal", "Logique de jeu", "Débogage"],
+    "github": "https://github.com/enzhao08/Snake-game",
+    "image": "images/plateau.png",
+    "languages": [
+        { "nom": "C", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-c-57-1175191.png" },
+        { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
+        { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" }
+    ]
+  },
+  {
+    "id": "docker",
+    "titre": "Installation d'un poste de développement",
+    "objectif": "Configurer un environnement de dev avec Docker",
+    "description": "Mise en place de Docker, PHP, et Bash pour simuler un poste de dev.",
+    "contributions": "Création de conteneurs, scripts Bash, test PHP/MySQL",
+    "competences": ["Docker", "Bash", "PHP", "Débogage", "Configuration système"],
+    "github": "https://github.com/enzhao08/Automatisation-de-fichiers",
+    "image": "images/Docker.svg",
+    "languages": [
+      { "nom": "Docker", "logo": "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" },
+      { "nom": "Bash", "logo": "https://cdn-icons-png.flaticon.com/512/919/919837.png" },
+      { "nom": "PHP", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-php-99-1175127.png" },
+      { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" }
+    ]
+  },
+  {
+    "id": "journal",
+    "titre": "Création d’un journal",
+    "objectif": "Créer un journal papier",
+    "description": "Projet de création de maquette en noir et blanc pour un journal scolaire.",
+    "contributions": "Création visuelle, dessin des caricatures politiques, rédaction d’articles",
+    "competences": ["Mise en page", "Créativité", "Communication", "Canva"],
+    "image": "images/Journal.png",
+    "languages": [
+      { "nom": "Canva", "logo": "https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" }
+    ],
+    "lien": {
+        "url": "pdf/journal_B1.pdf",
+        "label": "Voir le PDF"
+    }
+  },
+  {
+    "id": "bddetudiant",
+    "titre": "Exploitation d’une base de données",
+    "objectif": "Créer et manipuler une base de données académique",
+    "description": "Travail sur une base SQL simulant des inscriptions étudiantes.",
+    "contributions": "Modélisation, requêtes SQL, analyse",
+    "competences": ["SQL", "Modélisation", "Analyse", "Présentation"],
+    "github": "https://github.com/enzhao08/Base-de-donn-e-tudiante",
+    "image": "images/BaseDeDonnee.png",
+    "languages": [
+      { "nom": "SQL Workbench", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/320px-MySQL_logo.svg.png" },
+      { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" }
+    ]
+  },
+  {
+    "id": "gpelladanse",
+    "titre": "Gestion de projet",
+    "objectif": "Organiser un projet d'équipe en méthode agile",
+    "description": "Planification et suivi d’un projet de développement pour une application de danse.",
+    "contributions": "Organisation, répartition des tâches, Organigramme des tâches, matrice RACI, SEL, Charge de travail, Gantt prévisonnel et réel",
+    "competences": ["Agilité", "Communication", "Planification", "Suivi de projet"],
+    "github": "https://github.com/enzhao08/Gestion-de-projet-EllaDanse-",
+    "image": "images/GestionDeProjet.png",
+    "languages": [
+      { "nom": "Excel", "logo": "https://cdn-icons-png.flaticon.com/512/732/732220.png" },
+      { "nom": "Project Libre", "logo": "https://fosstorrents.com/img/ProjectLibre.png" },
+      { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" }
+    ]
+  },
+  {
+    "id": "snakeauto",
+    "titre": "Comparaison d'approches algorithmiques",
+    "objectif": "Analyser plusieurs stratégies d’IA sur un même jeu",
+    "description": "Comparaison de différentes IA pour faire avancer un serpent automatiquement, repris du projet snake manuel",
+    "contributions": "Codage en C, mise en place des algorithmes, tests",
+    "competences": ["C", "Algorithmes", "Débogage", "Analyse"],
+    "github": "https://github.com/enzhao08/Auto-snake-game",
+    "image": "images/plateau.png",
+    "languages": [
+      { "nom": "C", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-c-57-1175191.png" },
+      { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" }
+    ]
+  },
+  {
+    "id": "elladanse",
+    "titre": "Développement d'une application",
+    "objectif": "Créer une application Java pour un cas client",
+    "description": "Développement JavaFX pour un projet final avec interface utilisateur.",
+    "contributions": "Dev IHM, présentation, tests fonctionnels",
+    "competences": ["Java", "UI", "Client", "Travail d’équipe"],
+    "github": "https://github.com/enzhao08/Application-EllaDanse",
+    "image": "images/AppliEllaDanse.png",
+    "languages": [
+      { "nom": "Java", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png" },
+      { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
+      { "nom": "Scene Builder", "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/fe/SceneBuilderLogo.png/640px-SceneBuilderLogo.png" },
+      { "nom": "Eclipse", "logo": "https://cdn.worldvectorlogo.com/logos/eclipse-11.svg" },
+      { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
+      { "nom": "Figma", "logo": "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" },
+      { "nom": "Canva", "logo": "https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" },
+      { "nom": "Visual Paradigm Online", "logo": "https://store-images.s-microsoft.com/image/apps.37179.b19e18e4-8129-4f14-9c5f-94ff9f478a8e.7039006e-f2b2-4482-98db-255ae2f58628.bd478170-6d94-42f7-b043-44f31827a0d2.png" }
+    ]
+  },
+  {
+    "id": "jardiniere",
+    "titre": "Création d’une jardinière connectée",
+    "objectif": "Programmer une solution embarquée pour la gestion d’un potager",
+    "description": "Projet de fin d’année autour de l’Arduino et de capteurs.",
+    "contributions": "Montage électronique, programmation C++, tests",
+    "competences": ["C++", "Arduino", "Capteurs", "Travail d'équipe"],
+    "github": "https://github.com/enzhao08/Jardini-re-Connect-e",
+    "image": "ress/noimg.png",
+    "languages": [
+      { "nom": "C++", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-c-4-226082.png" },
+      { "nom": "Arduino", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Arduino_IDE_logo.svg/2048px-Arduino_IDE_logo.svg.png" },
+      { "nom": "Scratch", "logo": "https://seeklogo.com/images/S/scratch-cat-logo-7F652C6253-seeklogo.com.png" }
+    ]
+  },
+  {
+    "id": "knn",
+    "titre": "Classification et regroupement de données",
+    "objectif": "Programmer les algorithmes KNN et K-means pour traiter et analyser des ensembles de points",
+    "description": "Projet réalisé en Python visant à implémenter les algorithmes KNN (classification supervisée) et K-means (clustering non supervisé). Nous avons appliqué différents calculs de distances (euclidienne, Manhattan, Minkowski) pour observer les comportements de regroupement de points dans un repère.",
+    "contributions": "Codage partiel des algorithmes KNN et K-means, visualisations, rédaction du rapport de projet.",
+    "competences": ["Python", "Algorithmique", "Analyse de données", "Mathématiques", "Rédaction technique"],
+    "github": "https://github.com/enzhao08/Algorithme-Knn-et-Kmeans",
+    "image": "images/Knn.jpg",
+    "languages": [
+        { "nom": "Python", "logo": "https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png" },
+        { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
+        { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" }
+    ]
+  }
+]
