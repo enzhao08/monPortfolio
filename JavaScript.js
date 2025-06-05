@@ -508,9 +508,14 @@ document.querySelectorAll('.flip-card').forEach(card => {
 
 
 //MODAL CARTE DE VISITE
-document.getElementById("openBusinessCard").onclick = () => {
-  document.getElementById("businessCardModal").style.display = "flex";
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("openBusinessCard");
+  if (button) {
+    button.onclick = () => {
+      document.getElementById("businessCardModal").style.display = "flex";
+    };
+  }
+});
 
 document.getElementById("closeBusinessCard").onclick = () => {
   document.getElementById("businessCardModal").style.display = "none";
