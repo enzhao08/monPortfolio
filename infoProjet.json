@@ -45,7 +45,7 @@
     "image": "images/Docker.svg",
     "languages": [
       { "nom": "Docker", "logo": "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" },
-      { "nom": "Bash", "logo": "https://cdn-icons-png.flaticon.com/512/919/919837.png" },
+      { "nom": "Bash", "logo": "https://img.icons8.com/?size=160&id=50ZQHdJTmPqw&format=png" },
       { "nom": "PHP", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-php-99-1175127.png" },
       { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" }
     ]
@@ -76,7 +76,7 @@
     "github": "https://github.com/enzhao08/Base-de-donn-e-tudiante",
     "image": "images/BaseDeDonnee.png",
     "languages": [
-      { "nom": "SQL Workbench", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/320px-MySQL_logo.svg.png" },
+      { "nom": "SQL Workbench", "logo": "https://images.icon-icons.com/1381/PNG/512/mysqlworkbench_93532.png" },
       { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" }
     ]
   },
@@ -120,6 +120,7 @@
     "image": "images/AppliEllaDanse.png",
     "languages": [
       { "nom": "Java", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png" },
+      { "nom": "JavaFx", "logo": "https://codigojava.online/wp-content/uploads/2023/02/JavaFX.png" },
       { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
       { "nom": "Scene Builder", "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/f/fe/SceneBuilderLogo.png/640px-SceneBuilderLogo.png" },
       { "nom": "Eclipse", "logo": "https://cdn.worldvectorlogo.com/logos/eclipse-11.svg" },
@@ -134,14 +135,13 @@
     "titre": "Création d’une jardinière connectée",
     "objectif": "Programmer une solution embarquée pour la gestion d’un potager",
     "description": "Projet de fin d’année autour de l’Arduino et de capteurs.",
-    "contributions": "Montage électronique, programmation C++, tests",
+    "contributions": "Montage électronique, soudure carte éléctronique, programmation C++, tests",
     "competences": ["C++", "Arduino", "Capteurs", "Travail d'équipe"],
     "github": "https://github.com/enzhao08/Jardini-re-Connect-e",
     "image": "ress/noimg.png",
     "languages": [
       { "nom": "C++", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-c-4-226082.png" },
-      { "nom": "Arduino", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Arduino_IDE_logo.svg/2048px-Arduino_IDE_logo.svg.png" },
-      { "nom": "Scratch", "logo": "https://seeklogo.com/images/S/scratch-cat-logo-7F652C6253-seeklogo.com.png" }
+      { "nom": "MIT App Inventor", "logo": "https://gallery.appinventor.mit.edu/image/4535bf75-b139-42be-9dd4-43e1081c345e/dwsdw.png" }
     ]
   },
   {
@@ -157,6 +157,29 @@
         { "nom": "Python", "logo": "https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png" },
         { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
         { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" }
+    ]
+  },
+  {
+    "id": "apache",
+    "titre": "Installation de services réseau",
+    "objectif": "Installer et configurer les services nécessaires au déploiement d’un site dynamique",
+    "description": "Projet réalisé en environnement Linux (Debian 11) avec installation d’un serveur Apache, d’une base de données MySQL et d’un interpréteur PHP. L’objectif était de créer un site web dynamique avec une partie sécurisée (authentification) et de manipuler des scripts PHP connectés à la base de données.",
+    "contributions": "Configuration Apache, création d’un espace privé sécurisé et d'une page 'Erreur 404', connexion à la base de données et affichage dynamique, rapport de fin de projet.",
+    "competences": ["HTML", "CSS", "JavaScript","Apache", "MySQL", "PHP", "Sécurité", "Administration réseau"],
+    "github": "https://github.com/enzhao08/Installation-de-services-r-seau",  
+    "lien": {
+        "url": "pdf/temp.pdf",
+        "label": "Voir le rapport PDF"
+    },
+    "image": "images/ApachePhpMySql.png",
+    "languages": [
+        { "nom": "HTML", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png?f=webp" },
+        { "nom": "CSS", "logo": "https://cdn-icons-png.freepik.com/512/732/732190.png" },
+        { "nom": "JavaScript", "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+        { "nom": "Apache", "logo": "https://images.seeklogo.com/logo-png/31/2/apache-logo-png_seeklogo-314278.png" },
+        { "nom": "PHP", "logo": "https://cdn-icons-png.flaticon.com/512/919/919830.png" },
+        { "nom": "MySQL", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/320px-MySQL_logo.svg.png" },
+        { "nom": "VSCode", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" }
     ]
   }
 ]
