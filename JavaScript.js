@@ -387,95 +387,6 @@ imageLinks.forEach(link => {
     });
 });
 
-//Compétences popup
-document.querySelectorAll('.skill-logo').forEach(img => {
-  img.addEventListener('click', () => {
-    const tech = img.alt.toLowerCase();
-    console.log(`Clicked on ${tech}`);  // Ajoute ce log pour vérifier
-    const links = {
-      html: 'https://developer.mozilla.org/fr/docs/Web/HTML',
-      css: 'https://developer.mozilla.org/fr/docs/Web/CSS',
-      c: 'https://fr.wikipedia.org/wiki/C_(langage)',
-      java: 'https://www.oracle.com/fr/java/',
-      javascript: 'https://developer.mozilla.org/fr/docs/Web/JavaScript',
-      assembleur: 'https://fr.wikipedia.org/wiki/Assembleur',
-      sql: 'https://fr.wikipedia.org/wiki/Structured_Query_Language',
-      php: 'https://www.php.net',
-      tutod: 'https://fr.wikipedia.org/wiki/Tutorial_D',
-    };
-    const link = links[tech];
-    if (link) {
-      window.open(link, '_blank');
-    }
-  });
-});
-
-
-//Carousel Langage Informatique
-const skillsItems = document.querySelectorAll('.carousel-skills-item');
-let skillsArray = Array.from(skillsItems);
-
-function updateSkillsCarousel() {
-    skillsArray = skillsArray.filter(el => el !== undefined && el !== null);
-    skillsArray.forEach((el, i) => {
-        if (!el) return; // Ignore undefined/null
-        el.className = 'carousel-skills-item';
-        if (i < 5) {
-            el.classList.add(`carousel-skills-item-${i + 1}`);
-        }
-    });
-}
-setInterval(() => {
-  skillsArray.push(skillsArray.shift());
-  updateSkillsCarousel();
-}, 2500);
-updateSkillsCarousel();
-
-//Application
-document.querySelectorAll('.appli-logo').forEach(img => {
-  img.addEventListener('click', () => {
-    const tech = img.alt.toLowerCase();
-    console.log(`Clicked on ${tech}`);  // Ajoute ce log pour vérifier
-    const links = {
-      vsc: 'https://code.visualstudio.com',
-      sqlworkbench: 'https://www.mysql.com/products/workbench/',
-      canva: 'https://www.canva.com',
-      eclipse: 'https://eclipseide.org',
-      scenebuilder: 'https://gluonhq.com/products/scene-builder/',
-      ciscopackettracer: 'https://www.netacad.com/fr/cisco-packet-tracer',
-      excel: 'https://www.microsoft.com/fr-fr/microsoft-365/excel',
-      word: 'https://www.microsoft.com/fr-fr/microsoft-365/word',
-      figma: 'https://www.figma.com/fr-fr/',
-      arduino: 'https://www.arduino.cc',
-    };
-    const link = links[tech];
-    if (link) {
-      window.open(link, '_blank');
-    }
-  });
-});
-
-
-//Carousel Langage Informatique
-const appliItems = document.querySelectorAll('.carousel-appli-item');
-let appliArray = Array.from(appliItems);
-
-function updateAppliCarousel() {
-    appliArray = appliArray.filter(el => el !== undefined && el !== null);
-    appliArray.forEach((el, i) => {
-        if (!el) return; // Ignore undefined/null
-        el.className = 'carousel-appli-item';
-        if (i < 5) {
-            el.classList.add(`carousel-appli-item-${i + 1}`);
-        }
-    });
-}
-setInterval(() => {
-  appliArray.push(appliArray.shift());
-  updateAppliCarousel();
-}, 2500);
-updateAppliCarousel();
-
 //Scrolling Avancement
 window.addEventListener('scroll', () => {
   const scrollBar = document.getElementById('scrollProgress');
@@ -533,3 +444,70 @@ window.onclick = (e) => {
     document.getElementById("businessCard").classList.remove("flip");
   }
 };
+
+
+//LANGUAGE ET LOGICIELS
+const logos = {
+      langages: [
+        { nom: "HTML", logo: "https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png?f=webp" },
+        { nom: "CSS", logo: "https://cdn-icons-png.freepik.com/512/732/732190.png" },
+        { nom: "JavaScript", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+        { nom: "Json", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png" },
+        { nom: "C", logo: "https://cdn.iconscout.com/icon/free/png-256/free-c-57-1175191.png" },
+        { nom: "C++", logo: "https://cdn.iconscout.com/icon/free/png-256/free-c-4-226082.png" },
+        { nom: "Java", logo: "https://cdn.iconscout.com/icon/free/png-256/free-java-60-1174953.png" },
+        { nom: "Assembleur", logo: "https://static-00.iconduck.com/assets.00/assembly-icon-1024x1024-lc5e1bk1.png" },
+        { nom: "PHP", logo: "https://cdn-icons-png.flaticon.com/512/919/919830.png" },
+        { nom: "SQL", logo: "https://db.cs.uni-tuebingen.de/teaching/ws2223/sql-is-a-programming-language/logo.svg" },
+        { nom: "Bash", logo: "https://img.icons8.com/?size=160&id=50ZQHdJTmPqw&format=png" },
+        { nom: "Python", logo: "https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png" }
+      ],
+      logiciels: [
+        { nom: "Visual Studio Code", logo: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
+        { nom: "SQL Workbench", logo: "https://images.icon-icons.com/1381/PNG/512/mysqlworkbench_93532.png" },
+        { nom: "Canva", logo: "https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" },
+        { nom: "Eclipse", logo: "https://cdn.worldvectorlogo.com/logos/eclipse-11.svg" },
+        { nom: "Scene Builder", logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/f/fe/SceneBuilderLogo.png/640px-SceneBuilderLogo.png" },
+        { nom: "Cisco Packet Tracer", logo: "https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png" },
+        { nom: "Excel", logo: "https://cdn-icons-png.flaticon.com/512/732/732220.png" },
+        { nom: "Word", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" },
+        { nom: "Figma", logo: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" },
+        { nom: "GitHub", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
+        { nom: "Visual Paradigm Online", logo: "https://store-images.s-microsoft.com/image/apps.37179.b19e18e4-8129-4f14-9c5f-94ff9f478a8e.7039006e-f2b2-4482-98db-255ae2f58628.bd478170-6d94-42f7-b043-44f31827a0d2.png" },
+        { nom: "Doxywizard", logo: "https://avatars.githubusercontent.com/u/1300762?v=4" },
+        { nom: "Spyder", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsJN32wvegS1DOyiC3OzVOWF2uAxqgyzndqQ&s" },
+        { "nom": "Rel", "logo": "https://dbdb.io/media/logos/rel.png" },
+      ],
+      serveurs: [
+        { nom: "Apache", logo: "https://images.seeklogo.com/logo-png/31/2/apache-logo-png_seeklogo-314278.png" },
+        { nom: "MySQL", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/320px-MySQL_logo.svg.png" },
+        { nom: "Docker", logo: "https://cdn.iconscout.com/icon/free/png-256/docker-226091.png" }
+      ]
+    };
+
+    // Fonction pour créer un <li> avec image + nom
+    function creerLogoItem(item) {
+      const li = document.createElement('li');
+      const img = document.createElement('img');
+      img.src = item.logo;
+      img.alt = item.nom;
+      const span = document.createElement('span');
+      span.textContent = item.nom;
+      li.appendChild(img);
+      li.appendChild(span);
+      return li;
+    }
+
+    // Fonction pour afficher une liste dans un container
+    function afficherListe(containerId, liste) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      liste.forEach(item => {
+        container.appendChild(creerLogoItem(item));
+      });
+    }
+
+    // Affichage au chargement
+    afficherListe('list-langages', logos.langages);
+    afficherListe('list-logiciels', logos.logiciels);
+    afficherListe('list-serveurs', logos.serveurs);
