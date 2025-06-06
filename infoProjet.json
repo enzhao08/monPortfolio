@@ -166,7 +166,7 @@
     "description": "Projet réalisé en environnement Linux (Debian 11) avec installation d’un serveur Apache, d’une base de données MySQL et d’un interpréteur PHP. L’objectif était de créer un site web dynamique avec une partie sécurisée (authentification) et de manipuler des scripts PHP connectés à la base de données.",
     "contributions": "Configuration Apache, création d’un espace privé sécurisé et d'une page 'Erreur 404', connexion à la base de données et affichage dynamique, rapport de fin de projet.",
     "competences": ["HTML", "CSS", "JavaScript","Apache", "MySQL", "PHP", "Sécurité", "Administration réseau"],
-    "github": "https://github.com/enzhao08/Installation-de-services-r-seau",  
+    "github": "https://github.com/enzhao08/Installation-de-services-r-seau",
     "lien": {
         "url": "pdf/temp.pdf",
         "label": "Voir le rapport PDF"
