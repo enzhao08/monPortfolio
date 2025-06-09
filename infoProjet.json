@@ -12,6 +12,7 @@
       { "nom": "HTML", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png?f=webp" },
       { "nom": "CSS", "logo": "https://cdn-icons-png.freepik.com/512/732/732190.png" },
       { "nom": "JavaScript", "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+      { "nom": "Json", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1024px-JSON_vector_logo.svg.png" },
       { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
       { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
       { "nom": "Netlify", "logo": "https://www.netlify.com/v3/img/components/logomark.png" },
@@ -63,7 +64,7 @@
     ],
     "lien": {
         "url": "pdf/journal_B1.pdf",
-        "label": "Voir le PDF"
+        "label": "Voir le PDF →"
     }
   },
   {
@@ -71,8 +72,8 @@
     "titre": "Exploitation d’une base de données",
     "objectif": "Créer et manipuler une base de données académique",
     "description": "Travail sur une base SQL simulant des inscriptions étudiantes.",
-    "contributions": "Modélisation, requêtes SQL, analyse",
-    "competences": ["SQL", "Modélisation", "Analyse", "Présentation"],
+    "contributions": "Modélisation, analyse",
+    "competences": ["SQL", "Modélisation", "Analyse"],
     "github": "https://github.com/enzhao08/Base-de-donn-e-tudiante",
     "image": "images/BaseDeDonnee.png",
     "languages": [
@@ -138,10 +139,12 @@
     "contributions": "Montage électronique, soudure carte éléctronique, programmation C++, tests",
     "competences": ["C++", "Arduino", "Capteurs", "Travail d'équipe"],
     "github": "https://github.com/enzhao08/Jardini-re-Connect-e",
-    "image": "ress/noimg.png",
+    "image": "images/Bioto.jpg",
     "languages": [
       { "nom": "C++", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-c-4-226082.png" },
-      { "nom": "MIT App Inventor", "logo": "https://gallery.appinventor.mit.edu/image/4535bf75-b139-42be-9dd4-43e1081c345e/dwsdw.png" }
+      { "nom": "MIT App Inventor", "logo": "https://gallery.appinventor.mit.edu/image/4535bf75-b139-42be-9dd4-43e1081c345e/dwsdw.png" },
+      { "nom": "Arduino", "logo": "https://static-00.iconduck.com/assets.00/arduino-ide-icon-2048x2025-x4ims8sb.png" },
+      { "nom": "Canva", "logo": "https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" }
     ]
   },
   {
@@ -199,7 +202,7 @@
     ],
     "lien": {
         "url": "siteJo/index.html",
-        "label": "Voir le site"
+        "label": "Voir le site →"
     }
   },
   {
@@ -209,15 +212,30 @@
     "description": "Création d'un team building de A à Z, c'est-à-dire les activités, la réalisation de la vidéo et la présentation du projet.",
     "contributions": "Toute la réalisation des vidéos à Vannes, choix de l'entreprise, réalisation du diaporama et participation au choix des activités.",
     "competences": ["Filmer", "Travailler en équipe", "Présentation"],
-    "image": "images/SiteWebJO.png",
+    "image": "images/TeamBuilding.png",
     "languages": [
       { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" },
       { "nom": "Open Camera", "logo": "https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_Open_Camera.png" },
       { "nom": "Canva", "logo": "https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" }
     ],
     "lien": {
-        "url": "videos/aquarius.mp4",
-        "label": "Voir la vidéo"
+        "url": "https://res.cloudinary.com/df3sacs8x/video/upload/v1749502080/VideoTeamBuilding_u9pknj.mp4",
+        "label": "Voir la vidéo →"
     }
+  },
+  {
+    "id": "bddfootball",
+    "titre": "Création d’une base de données",
+    "objectif": "Créer et implanter une base de donnée dans le domaine du football",
+    "description": "Conception d'une base de données et modélisation avec un diagramme de classe et traduction Diagramme de Classe vers le modèle relationnel et implantation en Tutorial D",
+    "contributions": "Création des tables et contraintes, modélisation du diagramme de classe, dessin du graphe des contraintes d’intégrité référentielles",
+    "competences": ["Tutorial D", "Modélisation", "Analyse"],
+    "github": "https://github.com/enzhao08/Base-de-donnee-football/tree/main",
+    "image": "images/bddFootball.png",
+    "languages": [
+      { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
+      { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
+      { "nom": "Rel", "logo": "https://dbdb.io/media/logos/rel.png" }
+    ]
   }
 ]
