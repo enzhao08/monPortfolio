@@ -166,7 +166,7 @@
     "description": "Projet réalisé en environnement Linux (Debian 11) avec installation d’un serveur Apache, d’une base de données MySQL et d’un interpréteur PHP. L’objectif était de créer un site web dynamique avec une partie sécurisée (authentification) et de manipuler des scripts PHP connectés à la base de données.",
     "contributions": "Configuration Apache, création d’un espace privé sécurisé et d'une page 'Erreur 404', connexion à la base de données et affichage dynamique, rapport de fin de projet.",
     "competences": ["HTML", "CSS", "JavaScript","Apache", "MySQL", "PHP", "Sécurité", "Administration réseau"],
-    "github": "https://github.com/enzhao08/Installation-de-services-r-seau",
+    "github": "https://github.com/enzhao08/Installation-de-services-r-seau",  
     "lien": {
         "url": "pdf/temp.pdf",
         "label": "Voir le rapport PDF"
@@ -181,5 +181,43 @@
         { "nom": "MySQL", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/320px-MySQL_logo.svg.png" },
         { "nom": "VSCode", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" }
     ]
+  },
+  {
+    "id": "jo",
+    "titre": "Site Web des Jeux Olympiques",
+    "objectif": "Concevoir un site web et le présenter devant le client",
+    "description": "Conception en équipe de 4 , un site web de A à Z sur le thème des Jeux olympiques en analysant une interview écrite d'un utilsateur client",
+    "contributions": "Page d'un sportif (ici, Stephen Curry), avec sa présentation, ses matchs joués et ses réseaux.",
+    "competences": ["HTML", "CSS", "Débogage", "Présentation"],
+    "github": "https://github.com/enzhao08/Site-Web-JO/tree/main",
+    "image": "images/SiteWebJO.png",
+    "languages": [
+      { "nom": "HTML", "logo": "https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png?f=webp" },
+      { "nom": "CSS", "logo": "https://cdn-icons-png.freepik.com/512/732/732190.png" },
+      { "nom": "GitHub", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
+      { "nom": "Visual Studio Code", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" }
+    ],
+    "lien": {
+        "url": "siteJo/index.html",
+        "label": "Voir le site"
+    }
+  },
+  {
+    "id": "teambuilding",
+    "titre": "Organisation d'un travail d'équipe",
+    "objectif": "Organiser un team building",
+    "description": "Création d'un team building de A à Z, c'est-à-dire les activités, la réalisation de la vidéo et la présentation du projet.",
+    "contributions": "Toute la réalisation des vidéos à Vannes, choix de l'entreprise, réalisation du diaporama et participation au choix des activités.",
+    "competences": ["Filmer", "Travailler en équipe", "Présentation"],
+    "image": "images/SiteWebJO.png",
+    "languages": [
+      { "nom": "Word", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" },
+      { "nom": "Open Camera", "logo": "https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_Open_Camera.png" },
+      { "nom": "Canva", "logo": "https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" }
+    ],
+    "lien": {
+        "url": "videos/aquarius.mp4",
+        "label": "Voir la vidéo"
+    }
   }
 ]
