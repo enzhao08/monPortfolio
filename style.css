@@ -8,6 +8,9 @@
 	font-family: 'Exo2';
 	src: url(fonts/exo_2/Exo2-Medium.otf), url(fonts/exo_2/Exo2-Black.otf), url(fonts/exo_2/Exo2-Regular.otf), url(fonts/exo_2/Exo2-Bold.otf)
 }
+*{
+	user-select: none;
+}
 html {
 	margin: 0;
 	background-color: #000000;
@@ -32,10 +35,10 @@ header {
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* force la hauteur minimale à 100% de la fenêtre */
+  min-height: 100vh;
 }
 main {
-  flex: 1; /* prend tout l’espace disponible entre header et footer */
+  flex: 1;
 }
 header.scrolled {
 	background-color: rgba(0, 0, 0, 0.6);
@@ -43,7 +46,6 @@ header.scrolled {
 }
 .titre-section {
 	scroll-margin-top: 150px;
-	/* Ajuste selon la hauteur de ton header */
 }
 h1, h3, form legend, button {
 	font-family: 'Orbitron', sans-serif;
@@ -87,8 +89,8 @@ a {
   overflow: hidden;
   z-index: 0;
   transition: color 0.3s ease, border-color 0.3s ease;
-  line-height: 1; /* évite les trous verticaux */
-  vertical-align: middle; /* bonus pour les alignements entre boutons */
+  line-height: 1;
+  vertical-align: middle;
 }
 .btn-style::before {
   content: "";
@@ -466,7 +468,11 @@ main > article{
 /* Face avant */
 .flip-card-front {
   z-index: 2;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /* Face arrière */
 .flip-card-back {
@@ -491,6 +497,25 @@ main > article{
 }
 .flip-card-back a:hover {
   background-color: #00FFFF;
+}
+.project-status {
+	background-color: #FF6F00;
+	color: #000;
+	padding: 4px 10px;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	box-shadow: 0 0 5px #FF6F00;
+}
+
+.project-status.en-cours {
+  background-color: #00FFFF;
+  box-shadow: 0 0 5px #00FFFF;
+}
+
+.flip-card-front .project-status {
+  margin-top: 10px;
+  align-self: center;
 }
 .piano-projects {
 	display: grid;
@@ -1271,21 +1296,3 @@ fieldset span {
 	background-color: transparent;
 }
 
-
-
-.project-status {
-  margin-top: auto;
-  align-self: flex-start;
-  background-color: #FF6F00;
-  color: #000;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  box-shadow: 0 0 5px #FF6F00;
-}
-
-.project-status.en-cours {
-  background-color: #00BFFF;
-  box-shadow: 0 0 5px #00BFFF;
-}
