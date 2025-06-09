@@ -472,11 +472,12 @@ const logos = {
         { nom: "Excel", logo: "https://cdn-icons-png.flaticon.com/512/732/732220.png" },
         { nom: "Word", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019–present%29.svg/512px-Microsoft_Office_Word_%282019–present%29.svg.png" },
         { nom: "Figma", logo: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" },
+        { nom: "Arduino", logo: "https://static-00.iconduck.com/assets.00/arduino-ide-icon-2048x2025-x4ims8sb.png" },
         { nom: "GitHub", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
         { nom: "Visual Paradigm Online", logo: "https://store-images.s-microsoft.com/image/apps.37179.b19e18e4-8129-4f14-9c5f-94ff9f478a8e.7039006e-f2b2-4482-98db-255ae2f58628.bd478170-6d94-42f7-b043-44f31827a0d2.png" },
         { nom: "Doxywizard", logo: "https://avatars.githubusercontent.com/u/1300762?v=4" },
         { nom: "Spyder", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsJN32wvegS1DOyiC3OzVOWF2uAxqgyzndqQ&s" },
-        { "nom": "Rel", "logo": "https://dbdb.io/media/logos/rel.png" },
+        { nom: "Rel", logo: "https://dbdb.io/media/logos/rel.png" },
       ],
       serveurs: [
         { nom: "Apache", logo: "https://images.seeklogo.com/logo-png/31/2/apache-logo-png_seeklogo-314278.png" },
