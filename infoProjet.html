@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projet - Enzo ANNIC</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="multi-layer-stars.css"/><!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projet - Enzo ANNIC</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="multi-layer-stars.css"/>
 </head>
 <body>
@@ -141,119 +134,18 @@
         });
 
         const insertLogos = (sectionId, items) => {
-          const container = document.getElementById(sectionId);
-          items.forEach(item => {
-            const img = document.createElement("img");
-            img.src = item.logo;
-            img.alt = item.nom;
-            img.title = item.nom;
-            img.style.width = "80px";
-            img.style.margin = "5px";
-            container.appendChild(img);
-          });
-        };
-
-        insertLogos("languages", projet.languages);
-      });
-  </script>
-  <script src="javascript.js"></script>
-</body>
-</html>
-
-</head>
-<body>
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
-  <nav>
-      <div class="logo-et-son">
-          <h1 class="accueil"><a href="index.html">Mon Portfolio</a></h1>
-          <i id="speakerIcon" class="fa-solid fa-volume-high speaker-icon"></i>
-          <span class="music-text"></span>
-      </div>
-      <ul>
-          <li><a href="index.html">A propos de moi <span></span></a></li>
-          <li><a href="projet.html">Mes projets<span></span></a></li>
-          <li><a href="index.html#passion">Mes passions<span></span></a></li>
-          <li><a href="contact.html">Contact<span></span></a></li>
-      </ul>
-  </nav>
-
-  <main id="contenuProjet">
-      <div class="image-container">
-        <img id="imageProjet" src="" alt="Illustration du projet">
-      </div>
-
-      <h1 id="titre"></h1>
-      <p><strong>Objectif :</strong> <span id="objectif"></span></p>
-      <p><strong>Description :</strong> <span id="description"></span></p>
-      <p><strong>Ce que j'ai fait :</strong> <span id="contributions"></span></p>
-      <p><strong>Compétences :</strong></p>
-      <ul id="competences"></ul>
-
-      
-
-      <div id="tech">
-        <h2>Langages et logiciels</h2>
-        <div id="languages"></div>
-        <div id="logiciels"></div>
-        <div id="outils"></div>
-      </div>
-      <a class="btn-style" href="projet.html">← Retour</a>
-      <a id="lienGithub" href="" target="_blank">Voir sur le GitHub</a>   
-  </main>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-
-    fetch('infoProjet.json')
-      .then(res => res.json())
-      .then(data => {
-        const projet = data.find(p => p.id === id);
-        if (!projet) {
-          document.getElementById("contenuProjet").innerHTML = "<p>Projet non trouvé.</p>";
-          return;
-        }
-
-        document.title = `${projet.titre} - Enzo ANNIC`;
-        document.getElementById("titre").textContent = projet.titre;
-        document.getElementById("imageProjet").src = projet.image;
-        document.getElementById("objectif").textContent = projet.objectif;
-        document.getElementById("description").textContent = projet.description;
-        document.getElementById("contributions").textContent = projet.contributions;
-        const lienElem = document.getElementById("lienGithub");
-
-        if (projet.lien) {
-          lienElem.href = projet.lien.url;
-          lienElem.textContent = projet.lien.label;
-          lienElem.style.display = "inline-block";
-        } else if (projet.github) {
-          lienElem.href = projet.github;
-          lienElem.textContent = "Voir le code sur GitHub";
-          lienElem.style.display = "inline-block";
-        } else {
-          lienElem.style.display = "none";
-        }
-
-        projet.competences.forEach(c => {
-          const li = document.createElement("li");
-          li.textContent = c;
-          document.getElementById("competences").appendChild(li);
+        const container = document.getElementById(sectionId);
+        container.innerHTML = ""; // ← Vide le conteneur avant ajout
+        items.forEach(item => {
+          const img = document.createElement("img");
+          img.src = item.logo;
+          img.alt = item.nom;
+          img.title = item.nom;
+          img.style.width = "80px";
+          img.style.margin = "5px";
+          container.appendChild(img);
         });
-
-        const insertLogos = (sectionId, items) => {
-          const container = document.getElementById(sectionId);
-          items.forEach(item => {
-            const img = document.createElement("img");
-            img.src = item.logo;
-            img.alt = item.nom;
-            img.title = item.nom;
-            img.style.width = "80px";
-            img.style.margin = "5px";
-            container.appendChild(img);
-          });
-        };
+      };
 
         insertLogos("languages", projet.languages);
       });
