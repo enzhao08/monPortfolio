@@ -20,7 +20,6 @@ body {
 	color: #FFFFFF;
 	margin: 0;
 	overflow-x: hidden;
-	cursor: url(images/cursorFinal.png), auto;
 	height: 100%;
 	width: 100%;
 }
@@ -1069,6 +1068,14 @@ fieldset span {
   cursor: pointer;
 }
 
+.return-business {
+  position: absolute;
+  bottom: -60px;
+  right: -20px;
+  font-size: 3em;
+  color: white;
+}
+
 /**************Custom Scroll Bar**************/
 ::-webkit-scrollbar {
 	width: 12px;
@@ -1296,3 +1303,68 @@ fieldset span {
 	background-color: transparent;
 }
 
+/*PARCOURS DIPLOME*/
+.diplomes-section {
+  padding: 50px 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-top: 4px solid #FF6F00;
+  border-bottom: 4px solid #FF6F00;
+  margin-bottom: 50px;
+}
+
+.diplomes-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #FF6F00;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.diplomes-contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.bloc-diplome {
+  flex: 1 1 250px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #FF6F00;
+  box-shadow: 0 0 10px rgba(255, 111, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.bloc-diplome:hover {
+  transform: scale(1.05);
+  border-left-color: #00FFFF;
+}
+
+.bloc-diplome h3 {
+  color: orange;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.bloc-diplome ul {
+  list-style: none;
+  padding-left: 0;
+  color: #CCCCCC;
+}
+
+.bloc-diplome li {
+  margin-bottom: 10px;
+}
+
+.bloc-diplome a {
+  color: #FF6F00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bloc-diplome a:hover {
+  color: #00FFFF;
+}
