@@ -35,7 +35,7 @@ const audio = document.getElementById('musiqueFond');
 const speakerIcon = document.getElementById('speakerIcon');
 const stopVideos = document.querySelectorAll('.stopMusic');
 
-audio.volume = 0.2;
+audio.volume = 0.1;
 
 let userMuted = false;
 
@@ -478,6 +478,9 @@ const logos = {
         { nom: "Doxywizard", logo: "https://avatars.githubusercontent.com/u/1300762?v=4" },
         { nom: "Spyder", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsJN32wvegS1DOyiC3OzVOWF2uAxqgyzndqQ&s" },
         { nom: "Rel", logo: "https://dbdb.io/media/logos/rel.png" },
+        { nom: "Project Libre", logo: "https://fosstorrents.com/img/ProjectLibre.png" },
+        { nom: "Vmware Workstation", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vmware_workstation_16_icon.svg/2051px-Vmware_workstation_16_icon.svg.png" }
+        
       ],
       serveurs: [
         { nom: "Apache", logo: "https://images.seeklogo.com/logo-png/31/2/apache-logo-png_seeklogo-314278.png" },
