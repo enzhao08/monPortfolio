@@ -1111,7 +1111,7 @@ fieldset span {
 	p{font-size: medium;}
 	.wallpaper{display: none;}
 	.gallery-item{height: 100px;}
-	.gallery-controls button {font-size: 30px;}
+	.gallery-controls button {font-size: 15px;}
 }
 
 @media (max-width: 480px) {
