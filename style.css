@@ -1110,6 +1110,8 @@ fieldset span {
 	h3 { font-size: 1rem; }
 	p{font-size: medium;}
 	.wallpaper{display: none;}
+	.gallery-item{height: 100px;}
+	.gallery-controls button {font-size: 30px;}
 }
 
 @media (max-width: 480px) {
@@ -1118,11 +1120,7 @@ fieldset span {
     	height: 16px;
     	font-size: 14px;
   }
-  	.carousel-skills-item{height: 50px;}
-	.carousel-appli-item{height: 50px;}
-	.gallery-item{height: 100px;}
-
-	.gallery-controls button {font-size: 30px;}
+	
 	
 }
 
