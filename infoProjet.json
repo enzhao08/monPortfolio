@@ -182,7 +182,8 @@
         { "nom": "Apache", "logo": "https://images.seeklogo.com/logo-png/31/2/apache-logo-png_seeklogo-314278.png" },
         { "nom": "PHP", "logo": "https://cdn-icons-png.flaticon.com/512/919/919830.png" },
         { "nom": "MySQL", "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/320px-MySQL_logo.svg.png" },
-        { "nom": "VSCode", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" }
+        { "nom": "VSCode", "logo": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
+        { "nom": "Vmware Workstation", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vmware_workstation_16_icon.svg/2051px-Vmware_workstation_16_icon.svg.png" }
     ]
   },
   {
