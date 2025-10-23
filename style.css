@@ -1224,7 +1224,7 @@ fieldset span {
 .langages, .logiciels {
   flex: 1 1 250px;
   max-height: 300px; 
-  overflow-y: auto;
+  
   border: 2px solid #FF6F00; 
   border-radius: 10px;
   padding: 10px;
