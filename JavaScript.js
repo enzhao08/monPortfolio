@@ -470,7 +470,7 @@ const logos = {
         { nom: "Scene Builder", logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/f/fe/SceneBuilderLogo.png/640px-SceneBuilderLogo.png" },
         { nom: "Cisco Packet Tracer", logo: "https://hurbad.com/wp-content/uploads/2021/12/Cisco-Packet-Tracer.png" },
         { nom: "Excel", logo: "https://cdn-icons-png.flaticon.com/512/732/732220.png" },
-        { nom: "Word", logo: "https://logos-world.net/wp-content/uploads/2020/03/Microsoft-Word-Logo.png" },
+        { nom: "Word", logo: "https://w7.pngwing.com/pngs/21/624/png-transparent-word-hd-logo-thumbnail.png" },
         { nom: "Figma", logo: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png" },
         { nom: "Arduino", logo: "https://cdn.freebiesupply.com/logos/large/2x/arduino-1-logo-svg-vector.svg" },
         { nom: "GitHub", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" },
